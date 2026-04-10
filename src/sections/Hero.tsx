@@ -81,27 +81,51 @@ export const Hero: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Side: Video */}
+          {/* Right Side: Video inside Premium Phone Mockup */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="w-full max-w-[320px] sm:max-w-[380px] lg:max-w-md mx-auto relative mt-8 lg:mt-0"
+            className="w-full max-w-[300px] sm:max-w-[320px] lg:max-w-[340px] mx-auto relative mt-12 lg:mt-0"
           >
-            {/* Glow effect behind the video */}
-            <div className="absolute -inset-1 bg-gradient-to-tr from-brand-blue to-brand-yellow rounded-3xl blur-xl opacity-30 pointer-events-none"></div>
+            {/* Glow effect behind the device */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-brand-blue to-brand-yellow rounded-[4rem] blur-2xl opacity-40 pointer-events-none"></div>
             
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[4px] border-white/10 bg-brand-dark/50 backdrop-blur-sm aspect-[9/16] flex items-center justify-center translate-z-0">
-              <video 
-                src={heroVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover rounded-[2.2rem]"
-              />
-              {/* Inner subtle shadow for depth */}
-              <div className="absolute inset-0 rounded-[2.2rem] shadow-[inset_0_0_20px_rgba(0,0,0,0.4)] pointer-events-none"></div>
+            {/* The Phone Chassis */}
+            <div className="relative rounded-[3rem] bg-gray-900 border-[2px] border-gray-800 p-[8px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7)] translate-z-0">
+              
+              {/* Volume & Power Button Accents */}
+              <div className="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-600 rounded-l-md"></div>
+              <div className="absolute -left-[3px] top-36 w-[3px] h-16 bg-gray-600 rounded-l-md"></div>
+              <div className="absolute -left-[3px] top-56 w-[3px] h-16 bg-gray-600 rounded-l-md"></div>
+              <div className="absolute -right-[3px] top-32 w-[3px] h-20 bg-gray-600 rounded-r-md"></div>
+
+              {/* The Screen */}
+              <div className="relative rounded-[2.5rem] overflow-hidden bg-black aspect-[9/16] w-full isolate">
+                
+                {/* Dynamic Island / Notch */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[35%] h-[30px] bg-black rounded-full z-20 flex items-center justify-between px-3">
+                  {/* Camera lens reflection */}
+                  <div className="w-2.5 h-2.5 rounded-full bg-blue-900/40 relative overflow-hidden ml-auto">
+                    <div className="absolute inset-0 bg-blue-400/20 shadow-inner"></div>
+                  </div>
+                </div>
+
+                <video 
+                  src={heroVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
+                {/* Screen Gloss/Reflection effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none rounded-[2.5rem] opacity-50 z-10"></div>
+
+                {/* Inner Bezel subtle shadow */}
+                <div className="absolute inset-0 rounded-[2.5rem] shadow-[inset_0_0_10px_rgba(0,0,0,0.9)] pointer-events-none z-10 ring-1 ring-white/5 inset-ring"></div>
+              </div>
             </div>
           </motion.div>
 
