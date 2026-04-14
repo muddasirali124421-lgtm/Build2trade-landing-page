@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <Logo className="mb-6 opacity-90 scale-90 origin-left" />
             <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              Connecting builders with high-quality, trusted tradespeople. Build your projects faster and smarter.
+              Our Mission: To make construction teamwork easy, clear, and fair for everyone.
             </p>
             <div className="flex gap-4">
               <a href="#" className="p-2 bg-gray-50 text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 rounded-full transition-colors">
@@ -36,44 +36,50 @@ export const Footer: React.FC = () => {
               <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Home</a></li>
               <li><a href="#how-it-works" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">How it Works</a></li>
               <li><a href="#benefits" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Benefits</a></li>
-              <li><a href="#testimonials" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Testimonials</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Blog: Tips & Stories</a></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Support */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-4">Services</h4>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">For Builders</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">For Contractors</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">For Tradespeople</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Enterprise</a></li>
-            </ul>
+            <h4 className="font-bold text-gray-900 mb-4">Help & Support</h4>
+            <p className="text-gray-500 text-sm leading-relaxed mb-3">
+              If you get stuck or have a question, our friendly team is ready to help. Open "Help & Support" in the app, write a short message, and tap Submit!
+            </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-4">Contact</h4>
+            <h4 className="font-bold text-gray-900 mb-4">Contact Us</h4>
             <ul className="space-y-3">
-              <li className="text-gray-500 text-sm">support@build2trade.com</li>
-              <li className="text-gray-500 text-sm">1-800-BUILD-IT</li>
-              <li className="text-gray-500 text-sm mt-4">
-                123 Construction Ave,<br/>
-                Suite 400<br/>
-                New York, NY 10001
+              <li className="text-gray-500 text-sm">Hi there! We would love to talk to you.</li>
+              <li className="text-gray-500 text-sm mt-4 font-semibold text-brand-blue cursor-pointer">
+                Send Us a Message
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Privacy & Terms Text */}
+        <div className="pt-8 mb-8 border-t border-gray-100 flex flex-col md:flex-row gap-8">
+          <div className="flex-1">
+            <h5 className="font-bold text-gray-800 text-xs uppercase mb-2">Privacy Policy</h5>
+            <p className="text-gray-400 text-xs leading-relaxed">
+              We collect basic things like your name and email so you can talk to builders safely. We keep details locked safely and never sell them.
+            </p>
+          </div>
+          <div className="flex-1">
+            <h5 className="font-bold text-gray-800 text-xs uppercase mb-2">Terms & Conditions</h5>
+            <p className="text-gray-400 text-xs leading-relaxed">
+              Rules: Be polite and honest. Agree on price before work. Make sure to pay on time. Builders must give clear instructions. Tradies must do good work.
+            </p>
+          </div>
+        </div>
+
+        <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Build2Trade. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-gray-600 text-sm">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-gray-600 text-sm">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>

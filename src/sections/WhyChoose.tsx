@@ -1,27 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, Zap, Shield, TrendingUp } from 'lucide-react';
+import { Clock, Users, FileText, Smartphone } from 'lucide-react';
 
 const benefits = [
   {
-    title: "Verified, High-Quality Trades",
-    description: "Every tradesperson goes through a rigorous vetting process to ensure reliability and excellence.",
-    icon: <CheckCircle2 size={24} className="text-brand-blue" />
+    title: "It Saves You Time",
+    description: "No more long phone calls or searching for numbers. Find the right people fast.",
+    icon: <Clock size={24} className="text-brand-blue" />
   },
   {
-    title: "Fast & Accurate Matching",
-    description: "Our proprietary algorithm connects you with the right skills in record time.",
-    icon: <Zap size={24} className="text-brand-yellow" />
+    title: "Find Good People Easily",
+    description: "Every tradesperson is checked so you know they do a good job.",
+    icon: <Users size={24} className="text-brand-yellow" />
   },
   {
-    title: "Trusted Network",
-    description: "Join an ecosystem built on accountability, mutual respect, and shared success.",
-    icon: <Shield size={24} className="text-brand-blue" />
+    title: "No More Lost Paperwork",
+    description: "Everything is kept safe inside the app. Never lose a quote or invoice again.",
+    icon: <FileText size={24} className="text-brand-blue" />
   },
   {
-    title: "Time & Cost Efficiency",
-    description: "Reduce downtime and eliminate the hassle of traditional recruiting and bidding.",
-    icon: <TrendingUp size={24} className="text-brand-yellow" />
+    title: "Easy Phone Tracking",
+    description: "Everything is easy to track on your phone. Check your budgets from anywhere.",
+    icon: <Smartphone size={24} className="text-brand-yellow" />
   }
 ];
 
@@ -40,10 +40,10 @@ export const WhyChoose: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-                Why Choose <br/><span className="text-brand-blue">Build2Trade?</span>
+                Why People <br/><span className="text-brand-blue">Should Use It</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Whether you're looking for an extra set of hands for the week or a dedicated team for a large-scale commercial project, Build2Trade is your ultimate staffing partner.
+                Build2Trade keeps all your jobs, chats, and papers in one safe place so you don't have to worry.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -85,9 +85,9 @@ export const WhyChoose: React.FC = () => {
                         <img className="w-8 h-8 rounded-full border-2 border-brand-dark" src="https://i.pravatar.cc/100?img=12" alt="avatar" />
                         <img className="w-8 h-8 rounded-full border-2 border-brand-dark" src="https://i.pravatar.cc/100?img=13" alt="avatar" />
                       </div>
-                      <span className="text-sm font-semibold">Matched in 4 hours</span>
+                      <span className="text-sm font-semibold">Saved 5 hours this week</span>
                     </div>
-                    <p className="text-sm text-gray-200">"Build2Trade saved our timeline on the downtown high-rise project."</p>
+                    <p className="text-sm text-gray-200">"Build2Trade makes it so easy to find people and start building. Everything is in one spot!"</p>
                   </div>
                 </div>
               </div>
