@@ -5,21 +5,21 @@ import { Hammer, Briefcase, Ruler } from 'lucide-react';
 const services = [
   {
     role: "Builders",
-    title: "Find reliable trades quickly",
-    description: "Keep your projects on schedule. Post jobs and instantly connect with available tradespeople who have the exact skills you need.",
+    title: "Find Reliable Tradies Faster",
+    description: "Find reliable tradies faster and keep projects moving. Post jobs and instantly connect with available, verified professionals.",
     icon: <Ruler size={40} className="text-brand-blue" />
   },
   {
-    role: "Contractors",
-    title: "Scale your workforce efficiently",
-    description: "Whether you need a specialized crew or extra labor, easily expand your team without the long-term overhead of recruiting.",
-    icon: <Briefcase size={40} className="text-brand-blue" />
+    role: "Tradies",
+    title: "Access Consistent Work",
+    description: "Access consistent job opportunities and grow your network. Get matched with quality builders and steady work that fits your skills.",
+    icon: <Hammer size={40} className="text-brand-blue" />
   },
   {
-    role: "Tradespeople",
-    title: "Get consistent, quality leads",
-    description: "Say goodbye to downtime. Get matched with top builders and steady work that fits your schedule and expertise.",
-    icon: <Hammer size={40} className="text-brand-blue" />
+    role: "Businesses",
+    title: "Simplify Operations",
+    description: "Simplify operations and manage work more efficiently. Keep all your projects, quotes, and communications in one place.",
+    icon: <Briefcase size={40} className="text-brand-blue" />
   }
 ];
 
@@ -34,7 +34,7 @@ export const Services: React.FC = () => {
         <div className="text-center mb-20">
           <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-2 block">Who It's For</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Built for the Entire <span className="text-brand-blue">Ecosystem</span>
+            Designed for the Entire <span className="text-brand-blue">Construction Ecosystem</span>
           </h2>
         </div>
 

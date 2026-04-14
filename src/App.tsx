@@ -1,9 +1,12 @@
 
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
-import { HowItWorks } from './sections/HowItWorks';
+import { TrustStrip } from './sections/TrustStrip';
 import { WhyChoose } from './sections/WhyChoose';
+import { HowItWorks } from './sections/HowItWorks';
+import { FeatureShowcase } from './sections/FeatureShowcase';
 import { Services } from './sections/Services';
+import { FreeTrial } from './sections/FreeTrial';
 import { Trust } from './sections/Trust';
 import { CTASection } from './sections/CTASection';
 import { Footer } from './sections/Footer';
@@ -14,9 +17,12 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <HowItWorks />
+        <TrustStrip />
         <WhyChoose />
+        <HowItWorks />
+        <FeatureShowcase />
         <Services />
+        <FreeTrial />
         <Trust />
         <CTASection />
       </main>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Users, FileText, Smartphone } from 'lucide-react';
+import logoImage from '../assets/Build-2-Trade-FF-01-768x599.png';
 
 const benefits = [
   {
@@ -40,11 +41,22 @@ export const WhyChoose: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-                Why People <br/><span className="text-brand-blue">Should Use It</span>
+                Still Chasing Tradies <br/><span className="text-brand-blue">Or Chasing Work?</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Build2Trade keeps all your jobs, chats, and papers in one safe place so you don't have to worry.
+              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                Builders struggle to find reliable tradies when they need them. Tradies struggle to secure consistent, quality jobs.
               </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Endless calls, delays, and miscommunication slow everything down and cost valuable time and money.
+              </p>
+              
+              {/* Solution Box */}
+              <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-xl p-6 mb-8">
+                <h3 className="text-xl font-bold text-brand-blue mb-3">One Platform. Everything Connected.</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Build2Trade brings builders and tradies together in a single, easy-to-use platform. Post jobs, connect instantly, and manage your work without the usual back-and-forth.
+                </p>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {benefits.map((benefit, idx) => (
@@ -62,39 +74,21 @@ export const WhyChoose: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Visual */}
-          <div className="lg:w-1/2 relative w-full h-[500px]">
+          {/* Right Visual - Logo */}
+          <div className="lg:w-1/2 relative w-full flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="absolute inset-0 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100"
+              className="relative w-full max-w-lg"
             >
               <img 
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                alt="Construction professionals looking at plans" 
-                className="w-full h-full object-cover"
+                src={logoImage}
+                alt="Build2Trade Logo" 
+                className="w-full h-auto object-contain"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex items-end">
-                <div className="p-8">
-                  <div className="bg-white/20 backdrop-blur-md border border-white/20 p-4 rounded-xl text-white">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="flex -space-x-2">
-                        <img className="w-8 h-8 rounded-full border-2 border-brand-dark" src="https://i.pravatar.cc/100?img=11" alt="avatar" />
-                        <img className="w-8 h-8 rounded-full border-2 border-brand-dark" src="https://i.pravatar.cc/100?img=12" alt="avatar" />
-                        <img className="w-8 h-8 rounded-full border-2 border-brand-dark" src="https://i.pravatar.cc/100?img=13" alt="avatar" />
-                      </div>
-                      <span className="text-sm font-semibold">Saved 5 hours this week</span>
-                    </div>
-                    <p className="text-sm text-gray-200">"Build2Trade makes it so easy to find people and start building. Everything is in one spot!"</p>
-                  </div>
-                </div>
-              </div>
             </motion.div>
-            
-            {/* Decorative element */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-yellow rounded-2xl -z-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmZiMyIvPjwvc3ZnPg==')] opacity-50"></div>
           </div>
           
         </div>

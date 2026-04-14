@@ -29,14 +29,24 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Company Pages */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-4">Quick Links</h4>
+            <h4 className="font-bold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Home</a></li>
-              <li><a href="#how-it-works" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">How it Works</a></li>
-              <li><a href="#benefits" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Benefits</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm">Blog: Tips & Stories</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Home</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> About Us</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Giveaway</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Legal Pages */}
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms Of Use</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms & Conditions</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -46,17 +56,7 @@ export const Footer: React.FC = () => {
             <p className="text-gray-500 text-sm leading-relaxed mb-3">
               If you get stuck or have a question, our friendly team is ready to help. Open "Help & Support" in the app, write a short message, and tap Submit!
             </p>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="text-gray-500 text-sm">Hi there! We would love to talk to you.</li>
-              <li className="text-gray-500 text-sm mt-4 font-semibold text-brand-blue cursor-pointer">
-                Send Us a Message
-              </li>
-            </ul>
+            <a href="#" className="text-brand-blue font-semibold text-sm hover:underline">Send Us a Message</a>
           </div>
         </div>
 

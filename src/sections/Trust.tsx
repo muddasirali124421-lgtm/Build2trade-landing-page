@@ -46,8 +46,9 @@ export const Trust: React.FC = () => {
 
         {/* Testimonials */}
         <div className="text-center mb-16">
+          <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-2 block">Social Proof</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Trusted by Industry <span className="text-brand-blue">Leaders</span>
+            Trusted by Builders and Tradies <span className="text-brand-blue">Across Australia</span>
           </h2>
         </div>
 
