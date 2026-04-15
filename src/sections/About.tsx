@@ -1,14 +1,7 @@
 import { motion } from 'framer-motion'
-import { Download, QrCode, ArrowRight, CheckCircle } from 'lucide-react'
+import { Download, QrCode, ArrowRight } from 'lucide-react'
 
 const About = () => {
-  const highlights = [
-    'Built by construction industry experts',
-    'Real solutions for real problems',
-    'Australia-wide network coverage',
-    'Free basic membership available',
-  ]
-
   return (
     <section id="about" className="relative py-20 lg:py-32 bg-white">
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-[150px]" />
