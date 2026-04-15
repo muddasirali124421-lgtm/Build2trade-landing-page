@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Search, Layers, ArrowRight } from 'lucide-react';
-import collaborationImg from '../assets/feature-collaboration.jpg';
-import insightsImg from '../assets/feature-insights.jpg';
+import collaborationImg from '../assets/feature-collaboration.png';
+import insightsImg from '../assets/feature-insights.png';
 import trackingImg from '../assets/feature-tracking.jpg';
-import verificationImg from '../assets/feature-verification.jpg';
-import quotingImg from '../assets/feature-quoting.jpg';
-import marketplaceImg from '../assets/feature-marketplace.jpg';
-import managementImg from '../assets/feature-management.jpg';
+import verificationImg from '../assets/feature-verification.png';
+import quotingImg from '../assets/feature-quoting.png';
+import marketplaceImg from '../assets/feature-marketplace.png';
+import managementImg from '../assets/feature-management.png';
 
 interface FeatureSectionProps {
   title: string;
@@ -30,30 +30,12 @@ const FeatureSection = ({ title, description, image, icon, reverse = false, bgCo
             transition={{ duration: 0.7, ease: "easeOut" }}
             className={`relative ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
           >
-            <div className="relative">
-              {/* Background gradient blob */}
-              <div className={`absolute -inset-4 rounded-3xl blur-3xl opacity-20 ${reverse ? 'bg-gradient-to-l from-brand-blue to-brand-yellow' : 'bg-gradient-to-r from-brand-blue to-brand-yellow'}`} />
-              
-              {/* Phone mockup container */}
-              <div className="relative rounded-[2.5rem] bg-gray-900 border-[3px] border-gray-800 p-[10px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.4)] max-w-[320px] mx-auto lg:max-w-[360px]">
-                {/* Notch */}
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[35%] h-[28px] bg-black rounded-full z-20" />
-                
-                {/* Screen */}
-                <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-[9/19.5]">
-                  <img 
-                    src={image} 
-                    alt={title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  
-                  {/* Screen reflection */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none" />
-                  
-                  {/* Inner shadow */}
-                  <div className="absolute inset-0 rounded-[2rem] shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none" />
-                </div>
-              </div>
+            <div className="relative flex items-center justify-center p-4 rounded-2xl">
+              <img 
+                src={image} 
+                alt={title}
+                className="w-full max-w-[380px] h-auto rounded-xl object-cover"
+              />
             </div>
           </motion.div>
 
