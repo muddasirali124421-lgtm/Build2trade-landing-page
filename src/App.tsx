@@ -9,6 +9,7 @@ import { Services } from './sections/Services';
 import { FreeTrial } from './sections/FreeTrial';
 import { Trust } from './sections/Trust';
 import { CTASection } from './sections/CTASection';
+import InviteForm from './sections/InviteForm';
 import { Footer } from './sections/Footer';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Trust />
         <CTASection />
       </main>
+      <InviteForm />
       <Footer />
     </div>
   );

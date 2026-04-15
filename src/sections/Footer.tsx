@@ -61,19 +61,19 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Privacy & Terms Text */}
-        <div className="pt-8 mb-8 border-t border-gray-100 flex flex-col md:flex-row gap-8">
-          <div className="flex-1">
+        <div className="pt-8 mb-0  flex flex-col md:flex-row gap-8">
+          {/* <div className="flex-1">
             <h5 className="font-bold text-gray-800 text-xs uppercase mb-2">Privacy Policy</h5>
             <p className="text-gray-400 text-xs leading-relaxed">
               We collect basic things like your name and email so you can talk to builders safely. We keep details locked safely and never sell them.
             </p>
-          </div>
-          <div className="flex-1">
+          </div> */}
+          {/* <div className="flex-1">
             <h5 className="font-bold text-gray-800 text-xs uppercase mb-2">Terms & Conditions</h5>
             <p className="text-gray-400 text-xs leading-relaxed">
               Rules: Be polite and honest. Agree on price before work. Make sure to pay on time. Builders must give clear instructions. Tradies must do good work.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
