@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { Logo } from '../components/Logo';
 
 
@@ -33,10 +33,11 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Home</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> About Us</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Giveaway</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Contact Us</a></li>
+              <li><Link to="/" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Home</Link></li>
+              <li><Link to="/about" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> About Us</Link></li>
+              <li><Link to="/giveaway" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Giveaway</Link></li>
+              <li><Link to="/blogs" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Blogs</Link></li>
+              <li><Link to="/contact" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Contact Us</Link></li>
             </ul>
           </div>
 
@@ -44,9 +45,9 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms Of Use</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms & Conditions</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Privacy Policy</a></li>
+              <li><Link to="/terms-of-use" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms Of Use</Link></li>
+              <li><Link to="/terms-and-conditions" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms & Conditions</Link></li>
+              <li><Link to="/privacy-policy" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -56,7 +57,7 @@ export const Footer: React.FC = () => {
             <p className="text-gray-500 text-sm leading-relaxed mb-3">
               If you get stuck or have a question, our friendly team is ready to help. Open "Help & Support" in the app, write a short message, and tap Submit!
             </p>
-            <a href="#" className="text-brand-blue font-semibold text-sm hover:underline">Send Us a Message</a>
+            <Link to="/contact" className="text-brand-blue font-semibold text-sm hover:underline">Send Us a Message</Link>
           </div>
         </div>
 
