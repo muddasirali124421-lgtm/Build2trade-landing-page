@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './sections/Footer';
 import InviteForm from './sections/InviteForm';
+import ScrollToTop from './components/ScrollToTop';
 
 // Page sections
 import { Hero } from './sections/Hero';
@@ -44,6 +45,7 @@ const HomePage = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen font-sans bg-white text-gray-900 selection:bg-brand-blue selection:text-white pb-0">
         <Navbar />
         <Routes>
