@@ -43,6 +43,15 @@ export const FreeTrial: React.FC = () => {
               Try Build2Trade with <span className="text-brand-yellow">Zero Risk</span>
             </h2>
             
+            {/* Pricing Offer */}
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-3xl md:text-4xl text-gray-400 line-through decoration-red-500 decoration-2">$49.99</span>
+              <div className="flex flex-col items-start">
+                <span className="text-4xl md:text-5xl font-bold text-white">$0</span>
+                <span className="text-brand-yellow text-sm font-semibold">for 3 months</span>
+              </div>
+            </div>
+            
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
               We understand that committing to a new platform can feel uncertain. That's why we offer a full 3-month free trial so you can explore everything without pressure.
             </p>
@@ -50,7 +59,7 @@ export const FreeTrial: React.FC = () => {
             {/* Important clarification */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-2xl mx-auto mb-8">
               <p className="text-gray-200 text-sm md:text-base">
-                <span className="text-brand-yellow font-semibold">Important:</span> You may see a subscription plan when signing up, but <span className="text-brand-yellow font-semibold">you will not be charged</span> during your trial period.
+                <span className="text-brand-yellow font-semibold">Limited Time:</span> Sign up before <span className="text-brand-yellow font-semibold">June 10th</span> and get 3 months completely free. No charges during your trial period.
               </p>
             </div>
           </motion.div>

@@ -101,7 +101,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-block py-1.5 px-4 rounded-full bg-brand-blue/30 border border-brand-blue/50 text-white text-sm font-semibold mb-6 tracking-wide backdrop-blur-md shadow-sm">
-                The #1 Network for Construction Professionals
+                Australia's First Digital Networking Platform For Builders & Tradies
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Connecting Builders to <span className="text-brand-yellow relative inline-block">Quality Trades
@@ -112,15 +112,15 @@ export const Hero: React.FC = () => {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed text-balance">
-                Simplify your workflow and hire reliable, verified tradespeople in minutes. Build with confidence, scale your projects, and meet your deadlines.
+                Simplify your workflow and hire reliable, verified Tradiepeople in minutes. Build with confidence, scale your projects, and meet your deadlines.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <button className="bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1">
-                  Find Trades
+                  Sign In
                 </button>
                 <button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-md transform hover:-translate-y-1 hover:shadow-lg">
-                  Post a Job
+                  Sign Up
                 </button>
               </div>
 
@@ -131,7 +131,7 @@ export const Hero: React.FC = () => {
                     <ShieldCheck size={22} />
                   </div>
                   <div>
-                    <div className="text-white font-bold leading-tight">100% Verified</div>
+                    <div className="text-white font-bold leading-tight">Build Your Network</div>
                     <div className="text-gray-400 text-xs mt-0.5">Vetted professionals</div>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export const Hero: React.FC = () => {
                     <Clock size={22} />
                   </div>
                   <div>
-                    <div className="text-white font-bold leading-tight">Fast Matching</div>
+                    <div className="text-white font-bold leading-tight">Manage Projects In One Place</div>
                     <div className="text-gray-400 text-xs mt-0.5">Connect in minutes</div>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export const Hero: React.FC = () => {
                     <HardHat size={22} />
                   </div>
                   <div>
-                    <div className="text-white font-bold leading-tight">500+ Trades</div>
+                    <div className="text-white font-bold leading-tight">Get More Jobs</div>
                     <div className="text-gray-400 text-xs mt-0.5">Ready to work</div>
                   </div>
                 </div>

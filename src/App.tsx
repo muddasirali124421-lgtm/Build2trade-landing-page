@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './sections/Footer';
 import InviteForm from './sections/InviteForm';
 import ScrollToTop from './components/ScrollToTop';
+import { FloatingPromoButton } from './components/FloatingPromoButton';
 
 // Page sections
 import { Hero } from './sections/Hero';
@@ -33,10 +34,10 @@ const HomePage = () => (
       <WhyChoose />
       <HowItWorks />
       <FeatureShowcase />
+       <FreeTrial />
       <Services />
-      <FreeTrial />
-      <Trust />
       <CTASection />
+      <Trust />
     </main>
     <InviteForm />
   </>
@@ -59,6 +60,7 @@ function App() {
           <Route path="/terms-of-use" element={<TermsOfUse />} />
         </Routes>
         <Footer />
+        <FloatingPromoButton />
       </div>
     </Router>
   );

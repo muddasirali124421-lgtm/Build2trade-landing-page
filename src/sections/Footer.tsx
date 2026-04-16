@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
 
         <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Build2Trade. All rights reserved.
+            © {new Date().getFullYear()}© All Rights Reserved 2026 Designed And Developed by Graphica Pro Artistry
           </p>
         </div>
       </div>

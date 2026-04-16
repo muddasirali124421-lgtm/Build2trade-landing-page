@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserPlus, Search, MessageSquare } from 'lucide-react';
+import { UserPlus, Search, MessageSquare, FileCheck, FolderOpen } from 'lucide-react';
 
-const steps = [
+const builderSteps = [
   {
     step: 1,
     icon: <UserPlus size={32} className="text-brand-blue" />,
@@ -22,6 +22,58 @@ const steps = [
     description: "Message, organise, and complete jobs efficiently—all in one place."
   }
 ];
+
+const tradieSteps = [
+  {
+    step: 1,
+    icon: <UserPlus size={32} className="text-brand-blue" />,
+    title: "Create Account",
+    description: "Sign up in seconds and start your journey to finding great projects."
+  },
+  {
+    step: 2,
+    icon: <FileCheck size={32} className="text-brand-yellow" />,
+    title: "Complete Profile",
+    description: "Showcase your skills, experience, and certifications to stand out."
+  },
+  {
+    step: 3,
+    icon: <FolderOpen size={32} className="text-brand-blue" />,
+    title: "Explore Project Leads",
+    description: "Browse and connect with builders who need your expertise."
+  }
+];
+
+const StepCard: React.FC<{ item: typeof builderSteps[0]; index: number; totalSteps: number }> = ({ item, index, totalSteps }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: index * 0.15, duration: 0.5 }}
+    className="relative text-center"
+  >
+    {/* Connector line (hidden on mobile) */}
+    {index < totalSteps - 1 && (
+      <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-brand-blue/20 to-brand-yellow/20"></div>
+    )}
+
+    {/* Step Number Circle */}
+    <div className="relative inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-blue/80 rounded-full mb-6 shadow-lg">
+      <span className="text-white font-bold text-xl">{item.step}</span>
+    </div>
+
+    {/* Icon */}
+    <div className="w-16 h-16 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-4">
+      {item.icon}
+    </div>
+
+    {/* Content */}
+    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+    <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
+      {item.description}
+    </p>
+  </motion.div>
+);
 
 export const HowItWorks: React.FC = () => {
   return (
@@ -47,38 +99,38 @@ export const HowItWorks: React.FC = () => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {steps.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="relative text-center"
-            >
-              {/* Connector line (hidden on mobile) */}
-              {index < 2 && (
-                <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-brand-blue/20 to-brand-yellow/20"></div>
-              )}
-              
-              {/* Step Number Circle */}
-              <div className="relative inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-blue/80 rounded-full mb-6 shadow-lg">
-                <span className="text-white font-bold text-xl">{item.step}</span>
-              </div>
-              
-              {/* Icon */}
-              <div className="w-16 h-16 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-                {item.icon}
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
-                {item.description}
-              </p>
-            </motion.div>
-          ))}
+        {/* For Builders Section */}
+        <div className="mb-20">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold text-gray-900 mb-10 text-center"
+          >
+            For Builders
+          </motion.h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {builderSteps.map((item, index) => (
+              <StepCard key={index} item={item} index={index} totalSteps={builderSteps.length} />
+            ))}
+          </div>
+        </div>
+
+        {/* For Tradies Section */}
+        <div>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold text-gray-900 mb-10 text-center"
+          >
+            For Tradies
+          </motion.h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {tradieSteps.map((item, index) => (
+              <StepCard key={index} item={item} index={index} totalSteps={tradieSteps.length} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

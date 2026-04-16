@@ -108,7 +108,7 @@ const InviteForm = () => {
   const isSuccess = statusMessage && !isError
 
   return (
-    <section className="bg-[#183473] py-16 px-4">
+    <section className="bg-[#093370] py-16 px-4">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-white text-3xl font-semibold mb-4">
           Invite Preferred Tradies
