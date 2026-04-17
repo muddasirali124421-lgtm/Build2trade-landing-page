@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
   }
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-brand-dark">
+    <section className="relative pt-7 md:pt-26 lg:pt-40 pb-20 lg:pb-32 overflow-hidden bg-brand-dark">
       {/* Background styling elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
           
           {/* Left Side: Content */}
           <div className="max-w-2xl mx-auto lg:mx-0">
@@ -162,7 +162,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="w-full max-w-[300px] sm:max-w-[320px] lg:max-w-[340px] mx-auto relative mt-12 lg:mt-0"
+            className="w-full max-w-[300px] sm:max-w-[320px] lg:max-w-[340px] mx-auto relative mt-6 lg:mt-0"
           >
             {/* Glow effect behind the device */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-brand-blue to-brand-yellow rounded-[4rem] blur-2xl opacity-40 pointer-events-none"></div>
