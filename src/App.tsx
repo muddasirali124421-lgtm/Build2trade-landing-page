@@ -11,6 +11,7 @@ import { TrustStrip } from './sections/TrustStrip';
 import { WhyChoose } from './sections/WhyChoose';
 import { HowItWorks } from './sections/HowItWorks';
 import { FeatureShowcase } from './sections/FeatureShowcase';
+import { FeatureGrid } from './sections/FeatureGrid';
 import { Services } from './sections/Services';
 import { FreeTrial } from './sections/FreeTrial';
 import { Trust } from './sections/Trust';
@@ -24,6 +25,7 @@ import Contact from './sections/Contact';
 import PrivacyPolicy from './sections/PrivacyPolicy';
 import TermsAndConditions from './sections/TermsAndConditions';
 import TermsOfUse from './sections/TermsOfUse';
+import CoreFeatures from './sections/CoreFeatures';
 
 // Home page component
 const HomePage = () => (
@@ -58,6 +60,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/features" element={<CoreFeatures />} />
         </Routes>
         <Footer />
         <FloatingPromoButton />

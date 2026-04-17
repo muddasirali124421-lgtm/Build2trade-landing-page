@@ -125,7 +125,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Phone</p>
-                    <p className="text-gray-300">1-800-BUILD-2-TRADE</p>
+                    <p className="text-gray-300">+61 485 000 915</p>
                     <p className="text-sm text-gray-400">Mon-Fri, 9am-5pm AEST</p>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Email</p>
-                    <p className="text-gray-300">hello@build2trade.com.au</p>
+                    <p className="text-gray-300">admin@build2trade.com.au</p>
                     <p className="text-sm text-gray-400">We reply within 24 hours</p>
                   </div>
                 </div>
@@ -156,6 +156,9 @@ const Contact = () => {
               <div className="mt-8 pt-8 border-t border-white/10">
                 <p className="text-sm text-gray-400">
                   For urgent matters, please call us. For everything else, email works best.
+                </p>
+                <p className="text-sm text-gray-400 mt-2">
+                  ABN: 82 688 987 948
                 </p>
               </div>
             </div>

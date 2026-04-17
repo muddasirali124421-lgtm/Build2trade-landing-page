@@ -109,13 +109,36 @@ export const Hero: React.FC = () => {
                 Simplify your workflow and hire reliable, verified Tradiepeople in minutes. Build with confidence, scale your projects, and meet your deadlines.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1">
+              {/* Desktop Sign In/Sign Up Buttons - Hidden on mobile */}
+              <div className="hidden md:flex flex-col sm:flex-row gap-4 mb-12">
+                <a
+                  href="https://build2trade-customer-frontend-production.up.railway.app/sign-in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1 text-center"
+                >
                   Sign In
-                </button>
-                <button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-md transform hover:-translate-y-1 hover:shadow-lg">
+                </a>
+                <a
+                  href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-md transform hover:-translate-y-1 hover:shadow-lg text-center"
+                >
                   Sign Up
-                </button>
+                </a>
+              </div>
+
+              {/* Mobile Main CTA - Get Started Button */}
+              <div className="flex md:hidden flex-col gap-4 mb-12">
+                <a
+                  href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1 text-center"
+                >
+                  Get Started
+                </a>
               </div>
 
               {/* Trust highlights */}

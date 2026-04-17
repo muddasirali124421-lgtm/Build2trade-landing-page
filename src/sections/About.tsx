@@ -102,9 +102,14 @@ const About = () => {
               This platform represents more than just technology. It reflects decades of experience, industry knowledge and a genuine commitment to improving how construction operates in Australia. We are proud to be building a smarter, more connected future for the construction industry one project at a time.
             </p>
 
-            <button className="bg-brand-blue hover:bg-brand-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors mt-4">
+            <a
+              href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-blue hover:bg-brand-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors mt-4"
+            >
               Sign Up
-            </button>
+            </a>
           </motion.div>
         </div>
 

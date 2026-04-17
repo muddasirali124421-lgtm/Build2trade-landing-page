@@ -77,6 +77,21 @@ export const Footer: React.FC = () => {
           </div> */}
         </div>
 
+        {/* Contact Info Bar */}
+        <div className="py-4 border-t border-gray-100">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm text-gray-500">
+            <a href="mailto:admin@build2trade.com.au" className="hover:text-brand-blue transition-colors">
+              admin@build2trade.com.au
+            </a>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <a href="tel:+61485000915" className="hover:text-brand-blue transition-colors">
+              +61 485 000 915
+            </a>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <span>ABN: 82 688 987 948</span>
+          </div>
+        </div>
+
         <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()}© All Rights Reserved 2026 Designed And Developed by Graphica Pro Artistry

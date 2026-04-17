@@ -21,20 +21,20 @@ const FeatureSection = ({ title, description, image, icon, reverse = false, bgCo
   return (
     <section className={`py-20 lg:py-28 ${bgColor}`}>
       <div className="container mx-auto px-4">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center`}>
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: reverse ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className={`relative ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
+            className={`relative flex items-center justify-center ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
           >
-            <div className="relative flex items-center justify-center p-4 rounded-2xl">
+            <div className="relative w-full flex items-center justify-center">
               <img 
                 src={image} 
                 alt={title}
-                className="w-full max-w-[380px] h-auto rounded-xl object-cover"
+                className="w-full max-w-full h-auto rounded-xl object-contain"
               />
             </div>
           </motion.div>
@@ -45,9 +45,9 @@ const FeatureSection = ({ title, description, image, icon, reverse = false, bgCo
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            className={`${reverse ? 'lg:order-1' : 'lg:order-2'}`}
+            className={`flex items-center ${reverse ? 'lg:order-1' : 'lg:order-2'}`}
           >
-            <div className="max-w-lg">
+            <div className="w-full">
               {/* Icon badge */}
               <motion.div
                 initial={{ scale: 0 }}
