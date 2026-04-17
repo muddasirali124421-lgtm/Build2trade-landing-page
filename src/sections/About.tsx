@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Download, QrCode, FileText, MessageSquare, FileCheck } from 'lucide-react'
+import aboutImage from '../assets/WhatsApp Image 2026-04-15 at 7.05.02 AM (1).jpeg'
 
 const About = () => {
   return (
@@ -41,7 +42,7 @@ const About = () => {
             className="flex justify-center lg:sticky lg:top-8"
           >
             <img 
-              src="/src/assets/WhatsApp Image 2026-04-15 at 7.05.02 AM (1).jpeg" 
+              src={aboutImage}
               alt="Download Build2Trade App" 
               className="rounded-2xl shadow-2xl max-w-full h-auto"
             />

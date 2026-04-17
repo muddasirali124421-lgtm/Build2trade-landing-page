@@ -1,16 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import logo1 from '../assets/image_cvqxv.jpg.jpeg';
+import logo2 from '../assets/image_jdqwf.jpg.jpeg';
+import logo3 from '../assets/image_siyst.jpg.jpeg';
+import logo4 from '../assets/image_wbmls.jpg.jpeg';
+import logo5 from '../assets/project_comment_file6995b5577a418-Perfect-power-logo-Edited.webp';
+import logo6 from '../assets/project_comment_file6995b5577a2e9-image_rgpdl.webp';
+import logo7 from '../assets/image_ykfhv.jpg.jpeg';
 
 // Client logos data
 const clientLogos = [
-  { src: '/src/assets/image_cvqxv.jpg.jpeg', alt: 'MYM Construction' },
-  { src: '/src/assets/image_jdqwf.jpg.jpeg', alt: 'The Turners' },
-  { src: '/src/assets/image_siyst.jpg.jpeg', alt: 'L&W Group' },
-  { src: '/src/assets/image_wbmls.jpg.jpeg', alt: 'Board' },
-  { src: '/src/assets/project_comment_file6995b5577a418-Perfect-power-logo-Edited.webp', alt: 'Perfect Power' },
-  { src: '/src/assets/project_comment_file6995b5577a2e9-image_rgpdl.webp', alt: 'Eco Sure' },
-  { src: '/src/assets/image_ykfhv.jpg.jpeg', alt: 'Eco Sure Logo' },
+  { src: logo1, alt: 'MYM Construction' },
+  { src: logo2, alt: 'The Turners' },
+  { src: logo3, alt: 'L&W Group' },
+  { src: logo4, alt: 'Board' },
+  { src: logo5, alt: 'Perfect Power' },
+  { src: logo6, alt: 'Eco Sure' },
+  { src: logo7, alt: 'Eco Sure Logo' },
 ];
 
 const testimonials = [
@@ -74,7 +81,7 @@ export const Trust: React.FC = () => {
   return (
     <>
       {/* Client Showcase Section */}
-      <section className="py-20 bg-[#3067DF] relative overflow-hidden">
+      <section className="py-20 bg-[#093370] relative overflow-hidden">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <motion.div
