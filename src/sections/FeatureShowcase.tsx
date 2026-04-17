@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Search, Layers, ArrowRight } from 'lucide-react';
+import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Search, Layers, ArrowRight, Bell, Smartphone } from 'lucide-react';
 import collaborationImg from '../assets/feature-collaboration.png';
 import insightsImg from '../assets/feature-insights.png';
-import trackingImg from '../assets/feature-tracking.jpg';
+import trackingImg from '../assets/feature-tracking.png';
 import verificationImg from '../assets/feature-verification.png';
 import quotingImg from '../assets/feature-quoting.png';
 import marketplaceImg from '../assets/feature-marketplace.png';
 import managementImg from '../assets/feature-management.png';
+import notificationsImg from '../assets/WhatsApp Image 2026-04-17 at 5.16.48 AM-Photoroom.png';
+import mobileAppImg from '../assets/WhatsApp Image 2026-04-17 at 5.16.49 AM-Photoroom.png';
 
 interface FeatureSectionProps {
   title: string;
@@ -139,6 +141,22 @@ export const FeatureShowcase = () => {
       icon: <Layers className="w-7 h-7" />,
       reverse: false,
       bgColor: "bg-gradient-to-b from-white to-blue-50"
+    },
+    {
+      title: "Real-Time Notifications & Alerts",
+      description: "Stay informed with instant push notifications for new quotes, messages, project updates, and important deadlines. Never miss a critical update with our smart alert system that keeps you connected to your projects 24/7. Customize notification preferences to receive updates via email, SMS, or in-app alerts. Get notified immediately when quotes are submitted, projects are approved, or urgent actions are required, ensuring you respond quickly and keep projects moving forward.",
+      image: notificationsImg,
+      icon: <Bell className="w-7 h-7" />,
+      reverse: true,
+      bgColor: "bg-white"
+    },
+    {
+      title: "Access Anywhere with Mobile App",
+      description: "Take Build2Trade with you wherever you go with our powerful iOS and Android mobile applications. Manage projects, communicate with team members, review quotes, and track progress from your smartphone or tablet. The mobile app syncs seamlessly with the web platform, giving you full functionality on the move. Upload photos directly from job sites, receive instant notifications, and approve quotes with just a few taps. Perfect for tradies on the go and builders visiting multiple sites.",
+      image: mobileAppImg,
+      icon: <Smartphone className="w-7 h-7" />,
+      reverse: false,
+      bgColor: "bg-gray-50"
     }
   ];
 
