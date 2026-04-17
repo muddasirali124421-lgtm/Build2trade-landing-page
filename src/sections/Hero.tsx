@@ -86,8 +86,8 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-brand-blue/30"></div>
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div className="absolute top-20 right-20 w-72 h-72 bg-brand-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-20 -left-20 w-64 h-64 md:w-96 md:h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div className="absolute top-10 right-10 w-48 h-48 md:w-72 md:h-72 bg-brand-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

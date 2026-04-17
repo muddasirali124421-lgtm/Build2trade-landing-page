@@ -6,8 +6,8 @@ export const CTASection: React.FC = () => {
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-brand-dark"></div>
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue rounded-full filter blur-[100px] opacity-40 translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-yellow rounded-full filter blur-[100px] opacity-20 -translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand-blue rounded-full filter blur-[80px] md:blur-[100px] opacity-40 translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand-yellow rounded-full filter blur-[80px] md:blur-[100px] opacity-20 -translate-x-1/3 translate-y-1/3"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

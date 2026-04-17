@@ -27,8 +27,8 @@ export const Services: React.FC = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 rounded-full border-[40px] border-gray-50 opacity-50 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 rounded-full border-[40px] border-brand-blue/5 opacity-50 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full border-[30px] md:border-[40px] border-gray-50 opacity-50 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full border-[30px] md:border-[40px] border-brand-blue/5 opacity-50 pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">

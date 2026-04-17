@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, QrCode, FileText, MessageSquare, FileCheck } from 'lucide-react'
 import aboutImage from '../assets/WhatsApp Image 2026-04-15 at 7.05.02 AM (1).jpeg'
+import { Trust } from './Trust'
+import InviteForm from './InviteForm'
 
 const About = () => {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-white">
+    <>
+      <section id="about" className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
         
         {/* Section 1: Header */}
@@ -155,128 +157,34 @@ const About = () => {
         </div>
 
         {/* Section 4: Why We Exist - Blue Highlighted Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="bg-gradient-to-br from-brand-blue to-brand-dark rounded-3xl p-8 lg:p-12 text-white shadow-xl mb-20"
-        >
-          <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-center">Why We Exist</h3>
-          <p className="text-gray-200 mb-8 text-center max-w-3xl mx-auto leading-relaxed">
-            The building industry was broken. Good tradies could not find work. 
-            Builders could not find reliable workers. We fixed that by creating a platform that connects the right people at the right time.
-          </p>
-          <div className="grid grid-cols-2 gap-6 max-w-md mx-auto">
-            <div className="bg-white/10 rounded-2xl p-6 text-center backdrop-blur-sm">
-              <p className="text-4xl font-bold text-brand-yellow mb-2">10K+</p>
-              <p className="text-sm text-gray-300">Active Users</p>
-            </div>
-            <div className="bg-white/10 rounded-2xl p-6 text-center backdrop-blur-sm">
-              <p className="text-4xl font-bold text-brand-yellow mb-2">50K+</p>
-              <p className="text-sm text-gray-300">Jobs Posted</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Section 5: App Download Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="bg-brand-dark rounded-3xl p-8 lg:p-12 text-white overflow-hidden"
-        >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
-            <div className="text-center lg:text-left">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Download App Now
-              </h2>
-              <p className="text-gray-300 mb-8">
-                Get the full Build2Trade experience on your mobile device
-              </p>
-              
-              {/* Features */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-brand-yellow" />
-                  <span className="text-sm text-gray-300">Get Quotes</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FileCheck className="w-5 h-5 text-brand-yellow" />
-                  <span className="text-sm text-gray-300">Project Reports</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Download className="w-5 h-5 text-brand-yellow" />
-                  <span className="text-sm text-gray-300">Get Leads</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-brand-yellow" />
-                  <span className="text-sm text-gray-300">Live Chat</span>
-                </div>
+          {/* <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-gradient-to-br from-brand-blue to-brand-dark rounded-3xl p-8 lg:p-12 text-white shadow-xl mb-20"
+          >
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-center">Why We Exist</h3>
+            <p className="text-gray-200 mb-8 text-center max-w-3xl mx-auto leading-relaxed">
+              The building industry was broken. Good tradies could not find work. 
+              Builders could not find reliable workers. We fixed that by creating a platform that connects the right people at the right time.
+            </p>
+            <div className="grid grid-cols-2 gap-6 max-w-md mx-auto">
+              <div className="bg-white/10 rounded-2xl p-6 text-center backdrop-blur-sm">
+                <p className="text-4xl font-bold text-brand-yellow mb-2">10K+</p>
+                <p className="text-sm text-gray-300">Active Users</p>
               </div>
-
-              {/* Store Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="bg-black hover:bg-gray-900 text-white px-6 py-3 rounded-xl flex items-center gap-3 transition-colors border border-gray-700">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-2.96 1.78-2.46 5.98.22 7.13-.57 1.5-1.31 2.99-2.27 4.08zm-5.85-15.1c.07-1.76 1.5-3.3 3.24-3.47.25 1.96-1.64 3.78-3.24 3.47z"/>
-                  </svg>
-                  <div className="text-left">
-                    <p className="text-xs text-gray-400">Download on the</p>
-                    <p className="text-sm font-semibold">App Store</p>
-                  </div>
-                </button>
-                <button className="bg-black hover:bg-gray-900 text-white px-6 py-3 rounded-xl flex items-center gap-3 transition-colors border border-gray-700">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/>
-                  </svg>
-                  <div className="text-left">
-                    <p className="text-xs text-gray-400">GET IT ON</p>
-                    <p className="text-sm font-semibold">Google Play</p>
-                  </div>
-                </button>
+              <div className="bg-white/10 rounded-2xl p-6 text-center backdrop-blur-sm">
+                <p className="text-4xl font-bold text-brand-yellow mb-2">50K+</p>
+                <p className="text-sm text-gray-300">Jobs Posted</p>
               </div>
             </div>
-
-            {/* Right: QR/Phone Image Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex justify-center"
-            >
-              <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                <QrCode className="w-32 h-32 text-white mx-auto mb-4" />
-                <p className="text-center text-sm text-gray-300">Scan to Download</p>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-center mt-20"
-        >
-          <h2 className="text-2xl font-bold text-brand-dark mb-4">
-            Ready to Join Us?
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Start using Build2Trade today and see how it helps your business
-          </p>
-          <button className="bg-brand-blue hover:bg-brand-dark text-white font-semibold px-8 py-4 rounded-xl inline-flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl">
-            Get Started
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </motion.div>
+          </motion.div> */}
       </div>
     </section>
+    <Trust />
+    <InviteForm />
+    </>
   )
 }
 
