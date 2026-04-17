@@ -86,7 +86,7 @@ export const FeatureShowcase = () => {
   const features = [
     {
       title: "Collaborate Seamlessly on Every Project",
-      description: "Upload, share, and discuss project documents directly within your project chat. Keep all communication in one place and ensure everyone stays on the same page throughout the project lifecycle.",
+      description: "Upload, share, and discuss project documents directly within your project chat. Keep all communication in one place and ensure everyone stays on the same page throughout the project lifecycle. Our integrated messaging system supports file sharing, image uploads, and threaded conversations, making it easy to track decisions and maintain a complete project history. Real-time notifications ensure no message goes unnoticed.",
       image: collaborationImg,
       icon: <MessageSquare className="w-7 h-7" />,
       reverse: false,
@@ -94,7 +94,7 @@ export const FeatureShowcase = () => {
     },
     {
       title: "Make Smarter Hiring Decisions",
-      description: "View project specifics, assigned trades, budgets, and timelines. Read and submit reviews easily to build trust and make informed decisions about who to hire for your next project.",
+      description: "View project specifics, assigned trades, budgets, and timelines. Read and submit reviews easily to build trust and make informed decisions about who to hire for your next project. Access detailed performance metrics, past project portfolios, and verified credentials. Our intelligent matching algorithm recommends the best tradies based on your specific requirements, location, and project scope, saving you time and reducing hiring risks.",
       image: insightsImg,
       icon: <BarChart3 className="w-7 h-7" />,
       reverse: true,
@@ -102,7 +102,7 @@ export const FeatureShowcase = () => {
     },
     {
       title: "Track and Manage Projects Easily",
-      description: "Monitor statuses, approvals, and communication from one centralized dashboard. Get real-time updates on project progress and never miss an important milestone or approval request.",
+      description: "Monitor statuses, approvals, and communication from one centralized dashboard. Get real-time updates on project progress and never miss an important milestone or approval request. Visualize your project timeline with interactive Gantt charts, set automated reminders for deadlines, and track budget allocations across multiple trades. Our comprehensive reporting tools give you complete visibility into every aspect of your construction project.",
       image: trackingImg,
       icon: <LayoutDashboard className="w-7 h-7" />,
       reverse: false,
@@ -110,7 +110,7 @@ export const FeatureShowcase = () => {
     },
     {
       title: "Connect with Trusted Professionals",
-      description: "Trades verify their profiles while clients review qualifications before hiring. Our verification system ensures you're working with qualified, reliable professionals every time.",
+      description: "Trades verify their profiles while clients review qualifications before hiring. Our verification system ensures you're working with qualified, reliable professionals every time. We validate ABN numbers, trade licenses, insurance coverage, and professional certifications. Plus, our transparent review system allows you to see detailed feedback from previous clients, helping you choose tradies with proven track records of quality work and reliability.",
       image: verificationImg,
       icon: <Shield className="w-7 h-7" />,
       reverse: true,
@@ -118,7 +118,7 @@ export const FeatureShowcase = () => {
     },
     {
       title: "Simplify Your Quoting Process",
-      description: "Build, send, and approve project quotes quickly while keeping everything documented. Our streamlined quoting system helps you win more jobs and manage client expectations effectively.",
+      description: "Build, send, and approve project quotes quickly while keeping everything documented. Our streamlined quoting system helps you win more jobs and manage client expectations effectively. Create professional quotes with itemized breakdowns, attach specifications and drawings, and track quote status in real-time. Clients can approve quotes digitally, and automatic follow-ups ensure no opportunity slips through the cracks.",
       image: quotingImg,
       icon: <FileText className="w-7 h-7" />,
       reverse: false,
@@ -126,7 +126,7 @@ export const FeatureShowcase = () => {
     },
     {
       title: "Find Projects or Hire Faster",
-      description: "Discover renovation jobs or connect with contractors in one streamlined platform. Whether you're looking for work or need to hire, our marketplace makes it simple and efficient.",
+      description: "Discover renovation jobs or connect with contractors in one streamlined platform. Whether you're looking for work or need to hire, our marketplace makes it simple and efficient. Post jobs with detailed specifications and receive quotes from qualified tradies within hours. Set your budget range, timeline, and location preferences to find the perfect match. For tradies, get instant notifications for jobs matching your skills and availability.",
       image: marketplaceImg,
       icon: <Search className="w-7 h-7" />,
       reverse: true,
@@ -134,7 +134,7 @@ export const FeatureShowcase = () => {
     },
     {
       title: "Manage Everything in One Place",
-      description: "Track timelines, budgets, trades, and documents without switching tools. Our all-in-one project management solution brings everything together for maximum efficiency.",
+      description: "Track timelines, budgets, trades, and documents without switching tools. Our all-in-one project management solution brings everything together for maximum efficiency. From initial planning to final handover, manage every phase of your project within a single platform. Store contracts, permits, and specifications securely in the cloud, accessible from any device. Collaborate with your entire team including architects, engineers, and subcontractors seamlessly.",
       image: managementImg,
       icon: <Layers className="w-7 h-7" />,
       reverse: false,

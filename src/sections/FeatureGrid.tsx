@@ -113,47 +113,62 @@ const features = [
   {
     image: quotesImg,
     title: 'Send & Receive Quotes Instantly',
-    description: 'Builders can send quote requests directly from posted projects, while tradies respond instantly through the app. All quotes are stored in one place for easy comparison.'
+    description: 'Builders can send quote requests directly from posted projects, while tradies respond instantly through the app. All quotes are stored in one place, making it easy to compare options, communicate through chat and keep everyone aligned. This streamlined process reduces back-and-forth, saves time and helps projects move forward faster with clear decisions.'
   },
   {
     image: tradiesImg,
-    title: 'Tradies, Builders & Suppliers Network',
-    description: 'Tradies build a clear professional reputation through verified ratings and reviews. Builders can confidently decide who to hire based on transparent feedback.'
+    title: 'Tradies, Builders & Suppliers Using Build 2 Trade',
+    description: 'Tradies build a clear professional reputation through verified ratings and reviews. Builders can review this feedback to confidently decide who to hire, accept quotes or reject them with clear reasons. Tradies can also request rating updates from builders through the admin portal, helping ensure feedback remains fair, current and reflective of completed work.'
   },
   {
     image: projectReportImg,
-    title: 'Project Lifecycle Reports',
-    description: 'Builders can generate complete project lifecycle reports by entering key project details. Track budgets, trade allocations and project dates with accurate cost tracking.'
+    title: 'Project Lifecycle Report',
+    description: 'Builders can generate a complete project lifecycle report by entering key project details, including estimated budgets, trade allocations and project dates. Quotes can be assigned against each trade to provide accurate cost tracking from the start. The platform allows builders to download detailed project overview reports in Excel and PDF format, giving clear visibility into total costs, trade breakdowns and timelines. These reports make it easy to analyse budgets, monitor spending and identify whether a project is running at a profit or a loss, helping builders stay in control throughout the entire project lifecycle.'
   },
   {
     image: leadGenerationImg,
     title: 'Smart Lead Generation',
-    description: 'Get matched with verified builders looking for your specific trade skills. Receive targeted project leads that match your expertise and location preferences.'
+    description: 'Find quality work faster with intelligent lead generation designed for builders and tradies. Builders post projects directly in the app, giving tradies instant access to genuine opportunities without cold calls or chasing quotes. Tradies receive leads based on their selected trade and location preferences, ensuring only relevant work is shown.'
   },
   {
     image: tradieDiscoveryImg,
-    title: 'Verified Tradie Discovery',
-    description: 'Find the perfect tradie by location, specialty, ratings, and availability. Our verification system ensures all members have valid licenses and insurance.'
+    title: 'Seamless Project Management',
+    description: 'Manage projects from start to finish in one place. Builders can post projects by selecting required trades and sub-trades, receive quotes and communicate through in-app chat. Quotes can be accepted or rejected after reviewing tradie ratings, reviews and verified profiles, including ABN and email verification. Builders can also download project overview reports in Excel and PDF format to track budgets, costs and progress throughout the project lifecycle.'
   },
   {
     image: budgetTrackingImg,
-    title: 'Real-Time Budget Tracking',
-    description: 'Monitor project costs, expenses, and stay within your budget with smart alerts. Get notifications when spending approaches your set limits.'
-  },
-  {
-    image: excelReportsImg,
-    title: 'Export Professional Reports',
-    description: 'Download professional reports in Excel and PDF formats for accounting, compliance, and record keeping. One-click export with custom templates.'
-  },
-  {
-    image: ratingsImg,
-    title: 'Transparent Ratings & Reviews',
-    description: 'Build trust with a transparent feedback system. Verified reviews help builders choose the best partners and tradies showcase their quality work.'
+    title: 'Premium Support & Guidance',
+    description: 'Members receive priority support and ongoing guidance to get the most from the platform. Whether setting up projects, managing subscriptions or using advanced reporting tools, help is always available. Subscription pricing may increase in the coming months. Joining early ensures access to current rates and full feature availability as the platform continues to grow.'
   },
   {
     image: verificationImg,
-    title: 'ABN & License Verification',
-    description: 'All members are verified for ABN, licenses, insurance, and professional credentials. Work with confidence knowing everyone meets industry standards.'
+    title: 'ABN Verification',
+    description: 'Both builders and tradies are required to provide their ABN during sign-up. Once verified, a verified ABN badge is displayed on their profile, helping build trust and transparency across the platform. ABN verification allows users to confidently connect, quote and work with verified businesses, ensuring greater credibility and professionalism for everyone involved.'
+  },
+  {
+    image: excelReportsImg,
+    title: 'Smart Alerts & Notifications',
+    description: 'The Alerts tab keeps users informed with real-time notifications for chats, quotes, projects and other important updates. Everything is organised in one place, so nothing is missed. Additional tabs within Alerts separate quotes, messages and unread notifications, making it easy to review updates quickly and respond on time.'
+  },
+  {
+    image: ratingsImg,
+    title: 'Dashboard Overview',
+    description: 'The dashboard gives builders a clear overview of all active projects, including hired tradies and received quotes. Everything is organised in one place, making it easy to track progress and manage ongoing work. For tradies, the dashboard displays applied jobs, pending quotes and hired projects, with clear counts for each. This provides a quick snapshot of current workload and upcoming opportunities at a glance.'
+  },
+  {
+    image: budgetTrackingImg,
+    title: 'Priority Job Access',
+    description: 'Members receive early access to newly posted projects through priority job visibility. Tradies see relevant leads first based on their selected trade and location range, helping them respond faster and secure more work. Builders benefit from quicker responses and better engagement from available, verified tradies, keeping projects moving without delays.'
+  },
+  {
+    image: quotesImg,
+    title: 'Unlimited Project Posting',
+    description: 'Builders can publish unlimited projects with automatic trade and sub-trade setup. While creating a project, simply select the required trades and sub-trades with a tap, no manual entry required.'
+  },
+  {
+    image: projectReportImg,
+    title: 'Exclusive Member Tools',
+    description: 'Members unlock advanced tools designed to support complete project control. Builders can generate full project lifecycle reports, download Excel and PDF summaries, track budgets, analyse profit or loss, and collect trade invoices directly through the app. Tradies can send quotes, requote rejected jobs, issue invoices and manage multiple projects efficiently from one place.'
   }
 ];
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Send } from 'lucide-react'
+import { Phone, Mail, Send } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -143,12 +143,12 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6" />
+                    <span className="text-sm font-bold">ABN</span>
                   </div>
                   <div>
-                    <p className="font-semibold mb-1">Office</p>
-                    <p className="text-gray-300">123 Builder Street</p>
-                    <p className="text-gray-300">Sydney, NSW 2000</p>
+                    <p className="font-semibold mb-1">ABN</p>
+                    <p className="text-gray-300">82 688 987 948</p>
+                    <p className="text-sm text-gray-400">Australian Business Number</p>
                   </div>
                 </div>
               </div>
@@ -156,9 +156,6 @@ const Contact = () => {
               <div className="mt-8 pt-8 border-t border-white/10">
                 <p className="text-sm text-gray-400">
                   For urgent matters, please call us. For everything else, email works best.
-                </p>
-                <p className="text-sm text-gray-400 mt-2">
-                  ABN: 82 688 987 948
                 </p>
               </div>
             </div>
