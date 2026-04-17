@@ -11,7 +11,6 @@ import { TrustStrip } from './sections/TrustStrip';
 import { WhyChoose } from './sections/WhyChoose';
 import { HowItWorks } from './sections/HowItWorks';
 import { FeatureShowcase } from './sections/FeatureShowcase';
-import { FeatureGrid } from './sections/FeatureGrid';
 import { Services } from './sections/Services';
 import { FreeTrial } from './sections/FreeTrial';
 import { Trust } from './sections/Trust';
