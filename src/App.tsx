@@ -28,13 +28,13 @@ import TermsOfUse from './sections/TermsOfUse';
 // Home page component
 const HomePage = () => (
   <>
-    <main>
+    <main className="overflow-x-hidden">
       <Hero />
       <TrustStrip />
+      <FreeTrial />
       <WhyChoose />
       <HowItWorks />
       <FeatureShowcase />
-       <FreeTrial />
       <Services />
       <CTASection />
       <Trust />

@@ -43,12 +43,12 @@ export const FreeTrial: React.FC = () => {
               Try Build2Trade with <span className="text-brand-yellow">Zero Risk</span>
             </h2>
             
-            {/* Pricing Offer */}
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="text-3xl md:text-4xl text-gray-400 line-through decoration-red-500 decoration-2">$49.99</span>
-              <div className="flex flex-col items-start">
-                <span className="text-4xl md:text-5xl font-bold text-white">$0</span>
-                <span className="text-brand-yellow text-sm font-semibold">for 3 months</span>
+            {/* Pricing Offer - Enhanced Visual Hierarchy */}
+            <div className="flex items-center justify-center gap-3 md:gap-6 mb-6">
+              <span className="text-xl md:text-2xl text-gray-500 line-through decoration-red-500 decoration-2">$49.99</span>
+              <div className="flex flex-col items-center">
+                <span className="text-5xl md:text-7xl font-black text-white leading-none">$0</span>
+                <span className="text-brand-yellow text-base md:text-lg font-bold">for 3 months</span>
               </div>
             </div>
             
@@ -56,10 +56,13 @@ export const FreeTrial: React.FC = () => {
               We understand that committing to a new platform can feel uncertain. That's why we offer a full 3-month free trial so you can explore everything without pressure.
             </p>
             
-            {/* Important clarification */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4 max-w-2xl mx-auto mb-8">
-              <p className="text-gray-200 text-sm md:text-base">
-                <span className="text-brand-yellow font-semibold">Limited Time:</span> Sign up before <span className="text-brand-yellow font-semibold">June 10th</span> and get 3 months completely free. No charges during your trial period.
+            {/* Urgency Messaging */}
+            <div className="bg-gradient-to-r from-brand-yellow/20 via-brand-yellow/10 to-brand-yellow/20 border-2 border-brand-yellow/50 rounded-xl p-4 md:p-5 max-w-2xl mx-auto mb-8">
+              <p className="text-white text-center text-sm md:text-base font-medium">
+                <span className="text-brand-yellow font-bold">Free for 3 months</span> if you sign up before <span className="text-brand-yellow font-bold text-lg md:text-xl">June 10</span>
+              </p>
+              <p className="text-gray-300 text-center text-xs md:text-sm mt-2">
+                After trial: $49.99/month • Cancel anytime
               </p>
             </div>
           </motion.div>

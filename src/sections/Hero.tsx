@@ -82,13 +82,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative pt-7 md:pt-26 lg:pt-40 pb-20 lg:pb-32 overflow-hidden bg-brand-dark">
-      {/* Background styling elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-brand-blue/30"></div>
-        <div className="absolute -top-20 -left-20 w-64 h-64 md:w-96 md:h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div className="absolute top-10 right-10 w-48 h-48 md:w-72 md:h-72 bg-brand-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-      </div>
+      {/* Clean background */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
@@ -100,7 +94,7 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block py-1.5 px-4 rounded-full bg-brand-blue/30 border border-brand-blue/50 text-white text-sm font-semibold mb-6 tracking-wide backdrop-blur-md shadow-sm">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-brand-blue/30 border border-brand-blue/50 text-white text-xs md:text-sm font-semibold mb-6 tracking-wide backdrop-blur-md shadow-sm">
                 Australia's First Digital Networking Platform For Builders & Tradies
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -164,8 +158,8 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="w-full max-w-[300px] sm:max-w-[320px] lg:max-w-[340px] mx-auto relative mt-6 lg:mt-0"
           >
-            {/* Glow effect behind the device */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-brand-blue to-brand-yellow rounded-[4rem] blur-2xl opacity-40 pointer-events-none"></div>
+            {/* Device shadow - constrained */}
+            <div className="absolute inset-0 bg-brand-blue/20 rounded-[3rem] blur-xl opacity-50 pointer-events-none"></div>
             
             {/* The Phone Chassis */}
             <div className="relative rounded-[3rem] bg-gray-900 border-[2px] border-gray-800 p-[8px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7)] translate-z-0">
