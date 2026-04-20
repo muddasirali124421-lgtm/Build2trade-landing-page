@@ -36,7 +36,7 @@ const FeatureSection = ({ title, description, image, icon, reverse = false, bgCo
               <img 
                 src={image} 
                 alt={title}
-                className="w-full max-w-full h-auto rounded-xl object-contain"
+                className="w-full max-w-[320px] lg:max-w-[380px] h-auto rounded-xl object-contain"
               />
             </div>
           </motion.div>

@@ -1,8 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { PromoModal } from './PromoModal';
 
 export function FloatingPromoButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  useEffect(() => {
+    // Trigger animation after component mounts (only on homepage)
+    if (!isHomePage) return;
+    const timer = setTimeout(() => {
+      // setHasAnimated(true); // This line was removed because setHasAnimated is not defined in the provided code
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [isHomePage]);
+
+  // Don't render on non-home pages
+  if (!isHomePage) return null;
 
   return (
     <>
