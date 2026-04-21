@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { Send, CheckCircle, Loader2 } from 'lucide-react'
 import emailjs from '@emailjs/browser'
+import { FloatingDots } from '../components/FloatingDots'
 
 const InviteForm = () => {
   const formRef = useRef<HTMLFormElement>(null)
@@ -108,8 +109,10 @@ const InviteForm = () => {
   const isSuccess = statusMessage && !isError
 
   return (
-    <section className="bg-[#093370] py-16 px-4">
-      <div className="max-w-2xl mx-auto text-center">
+    <section className="bg-[#093370] py-16 px-4 relative overflow-hidden">
+      {/* Floating dots background */}
+      <FloatingDots count={15} variant="blue" />
+      <div className="max-w-2xl mx-auto text-center relative z-10">
         <h2 className="text-white text-3xl font-semibold mb-4">
           Invite Preferred Tradies
         </h2>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Layers, Bell, Smartphone } from 'lucide-react';
 import { useElementParallax } from '../hooks/useMouseParallax';
+import { FloatingDots } from '../components/FloatingDots';
 import collaborationImg from '../assets/feature-collaboration.png';
 import insightsImg from '../assets/feature-insights.png';
 import trackingImg from '../assets/feature-tracking.png';
@@ -156,8 +157,10 @@ export const FeatureShowcase = () => {
   return (
     <div id="features">
       {/* Section Header */}
-      <section className="py-20 bg-gradient-to-b from-brand-dark to-brand-blue">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-b from-brand-dark to-brand-blue relative overflow-hidden">
+        {/* Floating dots background */}
+        <FloatingDots count={20} variant="blue" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
