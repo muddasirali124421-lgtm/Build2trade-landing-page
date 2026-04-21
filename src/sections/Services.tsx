@@ -10,13 +10,13 @@ const services = [
     icon: <Ruler size={40} className="text-brand-blue" />
   },
   {
-    role: "Tradies",
+    role: "Tradesman",
     title: "Access Consistent Work",
     description: "Access consistent job opportunities and grow your network. Get matched with quality builders and steady work that fits your skills.",
     icon: <Hammer size={40} className="text-brand-blue" />
   },
   {
-    role: "Businesses",
+    role: "Supplier",
     title: "Simplify Operations",
     description: "Simplify operations and manage work more efficiently. Keep all your projects, quotes, and communications in one place.",
     icon: <Briefcase size={40} className="text-brand-blue" />
@@ -32,8 +32,8 @@ export const Services: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-2 block">Who It's For</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-2 block">Who are we networking with</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
             Designed for the Entire <span className="text-brand-blue">Construction Ecosystem</span>
           </h2>
         </div>

@@ -10,18 +10,18 @@ const benefits = [
     icon: <Clock size={24} className="text-brand-blue" />
   },
   {
-    title: "Find Good People Easily",
-    description: "Every tradesperson is checked so you know they do a good job.",
+    title: "Find Builders & Tradies Easily",
+    description: "Builders and tradies complete a full profile during sign-up with verified details, making it easier to connect with the right people.",
     icon: <Users size={24} className="text-brand-yellow" />
   },
   {
     title: "No More Lost Paperwork",
-    description: "Everything is kept safe inside the app. Never lose a quote or invoice again.",
+    description: "Project details kept safe inside the app",
     icon: <FileText size={24} className="text-brand-blue" />
   },
   {
-    title: "Easy Phone Tracking",
-    description: "Everything is easy to track on your phone. Check your budgets from anywhere.",
+    title: "Tracking Your Projects Has Never Been Easier",
+    description: "Build2Trade makes it easier to track your projects anytime, anywhere.",
     icon: <Smartphone size={24} className="text-brand-yellow" />
   }
 ];
@@ -47,12 +47,12 @@ export const WhyChoose: React.FC = () => {
                 Builders struggle to find reliable tradies when they need them. Tradies struggle to secure consistent, quality jobs.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Endless calls, delays, and miscommunication slow everything down and cost valuable time and money.
+                Endless calls, delays, and miscommunication slows projects down, costing valuable time and money.
               </p>
               
               {/* Solution Box */}
               <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-xl p-6 mb-8">
-                <h3 className="text-xl font-bold text-brand-blue mb-3">One Platform. Everything Connected.</h3>
+                <h3 className="text-xl font-bold text-brand-blue mb-3">One Platform. Stay Connected.</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Build2Trade brings builders and tradies together in a single, easy-to-use platform. Post jobs, connect instantly, and manage your work without the usual back-and-forth.
                 </p>

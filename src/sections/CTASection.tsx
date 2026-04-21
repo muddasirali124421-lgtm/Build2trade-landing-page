@@ -15,7 +15,7 @@ export const CTASection: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Start Building <span className="text-brand-yellow">Smarter</span> Today
+              Start Networking <span className="text-brand-yellow">Smarter</span> Today
             </h2>
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
               Join a growing network of builders and tradies simplifying how they connect, manage jobs, and grow their business.

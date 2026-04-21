@@ -142,6 +142,9 @@ export const FreeTrial: React.FC = () => {
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
               We understand that committing to a new platform can feel uncertain. That's why we offer a full 3-month free trial so you can explore everything without pressure.
             </p>
+            <p className="text-lg text-brand-yellow mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
+              Explore our platform with no cost.
+            </p>
             
             {/* Urgency Messaging - Animated */}
             <motion.div 

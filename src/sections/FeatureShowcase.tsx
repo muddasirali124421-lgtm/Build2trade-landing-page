@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Search, Layers, ArrowRight, Bell, Smartphone } from 'lucide-react';
+import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Layers, Bell, Smartphone } from 'lucide-react';
 import collaborationImg from '../assets/feature-collaboration.png';
 import insightsImg from '../assets/feature-insights.png';
 import trackingImg from '../assets/feature-tracking.png';
 import verificationImg from '../assets/feature-verification.png';
 import quotingImg from '../assets/feature-quoting.png';
-import marketplaceImg from '../assets/feature-marketplace.png';
 import managementImg from '../assets/feature-management.png';
 import notificationsImg from '../assets/WhatsApp Image 2026-04-17 at 5.16.48 AM-Photoroom.png';
 import mobileAppImg from '../assets/WhatsApp Image 2026-04-17 at 5.16.49 AM-Photoroom.png';
@@ -69,13 +68,6 @@ const FeatureSection = ({ title, description, image, icon, reverse = false, bgCo
                 {description}
               </p>
 
-              <motion.button
-                whileHover={{ x: 5 }}
-                className="inline-flex items-center gap-2 text-brand-blue font-semibold hover:text-brand-dark transition-colors group"
-              >
-                Learn more 
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -127,35 +119,27 @@ export const FeatureShowcase = () => {
       bgColor: "bg-white"
     },
     {
-      title: "Find Projects or Hire Faster",
-      description: "Discover renovation jobs or connect with contractors in one streamlined platform. Whether you're looking for work or need to hire, our marketplace makes it simple and efficient. Post jobs with detailed specifications and receive quotes from qualified tradies within hours. Set your budget range, timeline, and location preferences to find the perfect match. For tradies, get instant notifications for jobs matching your skills and availability.",
-      image: marketplaceImg,
-      icon: <Search className="w-7 h-7" />,
-      reverse: true,
-      bgColor: "bg-gray-50"
-    },
-    {
-      title: "Manage Everything in One Place",
+      title: "Manage Projects in One Place",
       description: "Track timelines, budgets, trades, and documents without switching tools. Our all-in-one project management solution brings everything together for maximum efficiency. From initial planning to final handover, manage every phase of your project within a single platform. Store contracts, permits, and specifications securely in the cloud, accessible from any device. Collaborate with your entire team including architects, engineers, and subcontractors seamlessly.",
       image: managementImg,
       icon: <Layers className="w-7 h-7" />,
-      reverse: false,
+      reverse: true,
       bgColor: "bg-gradient-to-b from-white to-blue-50"
     },
     {
       title: "Real-Time Notifications & Alerts",
-      description: "Stay informed with instant push notifications for new quotes, messages, project updates, and important deadlines. Never miss a critical update with our smart alert system that keeps you connected to your projects 24/7. Customize notification preferences to receive updates via email, SMS, or in-app alerts. Get notified immediately when quotes are submitted, projects are approved, or urgent actions are required, ensuring you respond quickly and keep projects moving forward.",
+      description: "Never miss what matters. Get instant alerts for new quotes, messages, and project milestones the moment they happen. Stay connected to your work 24/7 with smart notifications delivered straight to your device. Customize your preferences to focus on what is urgent, act faster, and keep every project moving without delays.",
       image: notificationsImg,
       icon: <Bell className="w-7 h-7" />,
-      reverse: true,
+      reverse: false,
       bgColor: "bg-white"
     },
     {
       title: "Access Anywhere with Mobile App",
-      description: "Take Build2Trade with you wherever you go with our powerful iOS and Android mobile applications. Manage projects, communicate with team members, review quotes, and track progress from your smartphone or tablet. The mobile app syncs seamlessly with the web platform, giving you full functionality on the move. Upload photos directly from job sites, receive instant notifications, and approve quotes with just a few taps. Perfect for tradies on the go and builders visiting multiple sites.",
+      description: "Communicate with tradies and builders directly from your smartphone. Digitalise your projects, grow your tradie network, and take control of every job from one platform.",
       image: mobileAppImg,
       icon: <Smartphone className="w-7 h-7" />,
-      reverse: false,
+      reverse: true,
       bgColor: "bg-gray-50"
     }
   ];

@@ -22,6 +22,13 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ image, title, description, index }: FeatureCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const maxLength = 120;
+  const shouldTruncate = description.length > maxLength;
+  const displayText = isExpanded || !shouldTruncate
+    ? description
+    : description.substring(0, maxLength).trim() + '...';
 
   return (
     <motion.div
@@ -71,24 +78,26 @@ const FeatureCard = ({ image, title, description, index }: FeatureCardProps) => 
 
           {/* Description */}
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            {description}
+            {displayText}
           </p>
 
           {/* Read More Link */}
-          <motion.a
-            href="#"
-            className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-            animate={{ color: isHovered ? '#F1B32F' : '#60A5FA' }}
-            transition={{ duration: 0.3 }}
-          >
-            Read More
-            <motion.span
-              animate={{ x: isHovered ? 4 : 0 }}
+          {shouldTruncate && (
+            <motion.button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="inline-flex items-center gap-2 text-sm font-semibold transition-colors bg-transparent border-none cursor-pointer"
+              animate={{ color: isHovered ? '#F1B32F' : '#60A5FA' }}
               transition={{ duration: 0.3 }}
             >
-              <ArrowRight className="w-4 h-4" />
-            </motion.span>
-          </motion.a>
+              {isExpanded ? 'Read Less' : 'Read More'}
+              <motion.span
+                animate={{ x: isHovered ? 4 : 0, rotate: isExpanded ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ArrowRight className="w-4 h-4" />
+              </motion.span>
+            </motion.button>
+          )}
         </div>
 
         {/* Hover Glow Effect */}

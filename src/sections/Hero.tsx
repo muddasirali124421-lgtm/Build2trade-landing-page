@@ -157,7 +157,7 @@ export const Hero: React.FC = () => {
                     <Clock size={22} />
                   </div>
                   <div>
-                    <div className="text-white font-bold leading-tight">Manage Projects In One Place</div>
+                    <div className="text-white font-bold leading-tight">Manage Projects in One Place</div>
                     <div className="text-gray-400 text-xs mt-0.5">Connect in minutes</div>
                   </div>
                 </div>
