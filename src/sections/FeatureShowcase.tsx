@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, BarChart3, LayoutDashboard, Shield, FileText, Layers, Bell, Smartphone } from 'lucide-react';
+import { useElementParallax } from '../hooks/useMouseParallax';
 import collaborationImg from '../assets/feature-collaboration.png';
 import insightsImg from '../assets/feature-insights.png';
 import trackingImg from '../assets/feature-tracking.png';
@@ -18,6 +19,20 @@ interface FeatureSectionProps {
   bgColor?: string;
 }
 
+// Parallax Image Component
+const ParallaxImage = ({ src, alt }: { src: string; alt: string }) => {
+  const parallax = useElementParallax(12);
+  return (
+    <div ref={parallax.ref} style={parallax.style} className="relative w-full flex items-center justify-center">
+      <img 
+        src={src} 
+        alt={alt}
+        className="w-full max-w-[320px] lg:max-w-[380px] h-auto rounded-xl object-contain"
+      />
+    </div>
+  );
+};
+
 const FeatureSection = ({ title, description, image, icon, reverse = false, bgColor = 'bg-white' }: FeatureSectionProps) => {
   return (
     <section className={`py-20 lg:py-28 ${bgColor}`}>
@@ -31,13 +46,7 @@ const FeatureSection = ({ title, description, image, icon, reverse = false, bgCo
             transition={{ duration: 0.7, ease: "easeOut" }}
             className={`relative flex items-center justify-center ${reverse ? 'lg:order-2' : 'lg:order-1'}`}
           >
-            <div className="relative w-full flex items-center justify-center">
-              <img 
-                src={image} 
-                alt={title}
-                className="w-full max-w-[320px] lg:max-w-[380px] h-auto rounded-xl object-contain"
-              />
-            </div>
+            <ParallaxImage src={image} alt={title} />
           </motion.div>
 
           {/* Content Side */}

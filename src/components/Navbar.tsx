@@ -24,17 +24,17 @@ export const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Nav - Shows Get Started button */}
-        <nav className="hidden md:flex items-center gap-6">
-          <Link to="/about" className="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors">About Us</Link>
-          <Link to="/features" className="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors">Features</Link>
-          <Link to="/giveaway" className="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors">Giveaway</Link>
-          <Link to="/blogs" className="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors">Blogs</Link>
-          <Link to="/contact" className="text-sm font-medium text-gray-600 hover:text-brand-blue transition-colors">Contact Us</Link>
+        <nav className="hidden md:flex items-center gap-8">
+          <Link to="/about" className="text-base font-medium text-gray-600 hover:text-brand-blue transition-colors">About Us</Link>
+          <Link to="/features" className="text-base font-medium text-gray-600 hover:text-brand-blue transition-colors">Features</Link>
+          <Link to="/giveaway" className="text-base font-medium text-gray-600 hover:text-brand-blue transition-colors">Giveaway</Link>
+          <Link to="/blogs" className="text-base font-medium text-gray-600 hover:text-brand-blue transition-colors">Blogs</Link>
+          <Link to="/contact" className="text-base font-medium text-gray-600 hover:text-brand-blue transition-colors">Contact Us</Link>
           <a
             href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-blue hover:bg-brand-dark text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm"
+            className="bg-brand-blue hover:bg-brand-dark text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-base"
           >
             Get Started
           </a>

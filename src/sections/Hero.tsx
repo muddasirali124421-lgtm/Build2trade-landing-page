@@ -2,12 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, HardHat, Clock, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import heroVideo from '../assets/WhatsApp Video 2026-04-10 at 4.54.59 AM (1).mp4';
+import { useElementParallax } from '../hooks/useMouseParallax';
 
 export const Hero: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [showTapToStart, setShowTapToStart] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const parallax = useElementParallax(15);
 
   useEffect(() => {
     // Attempt autoplay with sound on load
@@ -176,6 +178,8 @@ export const Hero: React.FC = () => {
 
           {/* Right Side: Video inside Premium Phone Mockup */}
           <motion.div
+            ref={parallax.ref}
+            style={parallax.style}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}

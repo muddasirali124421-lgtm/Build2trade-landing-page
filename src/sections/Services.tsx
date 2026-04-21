@@ -30,6 +30,32 @@ export const Services: React.FC = () => {
       <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 rounded-full border-[30px] md:border-[40px] border-gray-50 opacity-50 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 rounded-full border-[30px] md:border-[40px] border-brand-blue/5 opacity-50 pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
 
+      {/* Yellow floating dots for visual interest */}
+      {[...Array(10)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            left: `${5 + (i * 10) % 90}%`,
+            top: `${10 + (i * 8) % 80}%`,
+            width: `${4 + (i % 3) * 3}px`,
+            height: `${4 + (i % 3) * 3}px`,
+            backgroundColor: i % 2 === 0 ? 'rgba(241, 179, 47, 0.5)' : 'rgba(59, 130, 246, 0.3)',
+          }}
+          animate={{
+            y: [-10, 10, -10],
+            opacity: [0.3, 0.7, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 4 + (i % 3),
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: i * 0.4,
+          }}
+        />
+      ))}
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-2 block">Who are we networking with</span>

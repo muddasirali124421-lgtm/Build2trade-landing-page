@@ -1,7 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Users, FileText, Smartphone } from 'lucide-react';
+import { useElementParallax } from '../hooks/useMouseParallax';
 import logoImage from '../assets/Build-2-Trade-FF-01-768x599.png';
+
+// Parallax Logo Component
+const ParallaxLogo = () => {
+  const parallax = useElementParallax(15);
+  return (
+    <div className="lg:w-1/2 relative w-full flex items-center justify-center">
+      <motion.div
+        ref={parallax.ref}
+        style={parallax.style}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative w-full max-w-lg"
+      >
+        <img 
+          src={logoImage}
+          alt="Build2Trade Logo" 
+          className="w-full h-auto object-contain"
+        />
+      </motion.div>
+    </div>
+  );
+};
 
 const benefits = [
   {
@@ -75,21 +100,7 @@ export const WhyChoose: React.FC = () => {
           </div>
 
           {/* Right Visual - Logo */}
-          <div className="lg:w-1/2 relative w-full flex items-center justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative w-full max-w-lg"
-            >
-              <img 
-                src={logoImage}
-                alt="Build2Trade Logo" 
-                className="w-full h-auto object-contain"
-              />
-            </motion.div>
-          </div>
+          <ParallaxLogo />
           
         </div>
       </div>

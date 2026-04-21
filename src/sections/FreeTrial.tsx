@@ -38,25 +38,28 @@ export const FreeTrial: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/20 rounded-full filter blur-[120px] -translate-x-1/2 translate-y-1/2"
       />
-      {/* Floating particles */}
-      {[...Array(5)].map((_, i) => (
+      {/* Floating particles - more visible and more dots */}
+      {[...Array(12)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-brand-yellow/30 rounded-full"
+          className="absolute rounded-full"
           style={{
-            left: `${20 + i * 15}%`,
-            top: `${30 + (i % 3) * 20}%`,
+            left: `${10 + (i * 8) % 85}%`,
+            top: `${15 + (i * 7) % 70}%`,
+            width: `${6 + (i % 3) * 2}px`,
+            height: `${6 + (i % 3) * 2}px`,
+            backgroundColor: i % 3 === 0 ? 'rgba(241, 179, 47, 0.7)' : i % 3 === 1 ? 'rgba(59, 130, 246, 0.5)' : 'rgba(255, 255, 255, 0.4)',
           }}
           animate={{
-            y: [-20, 20, -20],
-            opacity: [0.2, 0.6, 0.2],
-            scale: [1, 1.5, 1],
+            y: [-15 - (i % 3) * 10, 15 + (i % 3) * 10, -15 - (i % 3) * 10],
+            opacity: [0.5, 0.9, 0.5],
+            scale: [1, 1.3, 1],
           }}
           transition={{
-            duration: 4 + i,
+            duration: 3 + (i % 4),
             repeat: Infinity,
             ease: "easeInOut",
-            delay: i * 0.5,
+            delay: i * 0.3,
           }}
         />
       ))}

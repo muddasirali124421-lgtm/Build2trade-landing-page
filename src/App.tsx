@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './sections/Footer';
 import InviteForm from './sections/InviteForm';
 import ScrollToTop from './components/ScrollToTop';
 import { FloatingPromoButton } from './components/FloatingPromoButton';
+import { PromoModal } from './components/PromoModal';
 
 // Page sections
 import { Hero } from './sections/Hero';
@@ -26,23 +28,44 @@ import TermsAndConditions from './sections/TermsAndConditions';
 import TermsOfUse from './sections/TermsOfUse';
 import CoreFeatures from './sections/CoreFeatures';
 
-// Home page component
-const HomePage = () => (
-  <>
-    <main className="overflow-x-hidden">
-      <Hero />
-      <TrustStrip />
-      <FreeTrial />
-      <WhyChoose />
-      <HowItWorks />
-      <FeatureShowcase />
-      <Services />
-      <CTASection />
-      <Trust />
-    </main>
-    <InviteForm />
-  </>
-);
+// Home page component with auto-popup
+const HomePage = () => {
+  const [isPromoModalOpen, setIsPromoModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Check if popup has already been shown
+    const hasSeenPopup = localStorage.getItem('build2trade_promo_shown');
+
+    if (!hasSeenPopup) {
+      // Show popup after a short delay (2 seconds)
+      const timer = setTimeout(() => {
+        setIsPromoModalOpen(true);
+        // Mark as shown
+        localStorage.setItem('build2trade_promo_shown', 'true');
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  return (
+    <>
+      <main className="overflow-x-hidden">
+        <Hero />
+        <TrustStrip />
+        <FreeTrial />
+        <WhyChoose />
+        <HowItWorks />
+        <FeatureShowcase />
+        <Services />
+        <CTASection />
+        <Trust />
+      </main>
+      <InviteForm />
+      <PromoModal isOpen={isPromoModalOpen} onClose={() => setIsPromoModalOpen(false)} />
+    </>
+  );
+};
 
 function App() {
   return (
