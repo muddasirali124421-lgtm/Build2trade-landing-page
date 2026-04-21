@@ -8,7 +8,7 @@ import verificationImg from '../assets/feature-verification.png';
 import quotingImg from '../assets/feature-quoting.png';
 import managementImg from '../assets/feature-management.png';
 import notificationsImg from '../assets/WhatsApp Image 2026-04-17 at 5.16.48 AM-Photoroom.png';
-import mobileAppImg from '../assets/WhatsApp Image 2026-04-17 at 5.16.49 AM-Photoroom.png';
+import mobileAppImg from '../assets/WhatsApp Image 2026-04-21 at 1.19.56 AM.png';
 
 interface FeatureSectionProps {
   title: string;
