@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, ArrowRight, CheckCircle, Loader2 } from 'lucide-react'
+import { FloatingDots } from '../components/FloatingDots'
 
 const Newsletter = () => {
   const [email, setEmail] = useState('')
@@ -22,6 +23,8 @@ const Newsletter = () => {
 
   return (
     <section className="relative py-16 bg-brand-navy border-t border-white/5">
+      {/* Floating dots background */}
+      <FloatingDots count={12} variant="blue" />
       <div className="section-padding max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

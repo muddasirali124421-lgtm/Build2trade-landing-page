@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, HardHat, Clock, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import heroVideo from '../assets/WhatsApp Video 2026-04-10 at 4.54.59 AM (1).mp4';
 import { useElementParallax } from '../hooks/useMouseParallax';
+import { FloatingDots } from '../components/FloatingDots';
 
 export const Hero: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -84,7 +85,8 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative pt-7 md:pt-26 lg:pt-40 pb-20 lg:pb-32 overflow-hidden bg-brand-dark">
-      {/* Clean background */}
+      {/* Floating dots background */}
+      <FloatingDots count={15} variant="blue" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">

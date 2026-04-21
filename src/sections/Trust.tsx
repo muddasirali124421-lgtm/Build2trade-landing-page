@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FloatingDots } from '../components/FloatingDots';
 import logo1 from '../assets/image_cvqxv.jpg.jpeg';
 import logo2 from '../assets/image_jdqwf.jpg.jpeg';
 import logo3 from '../assets/image_siyst.jpg.jpeg';
@@ -8,6 +9,7 @@ import logo4 from '../assets/image_wbmls.jpg.jpeg';
 import logo5 from '../assets/project_comment_file6995b5577a418-Perfect-power-logo-Edited.webp';
 import logo6 from '../assets/project_comment_file6995b5577a2e9-image_rgpdl.webp';
 import logo7 from '../assets/image_ykfhv.jpg.jpeg';
+import platinumEdgeLogo from '../assets/Platinum Edge logo_page-0001.jpg';
 
 // Client logos data
 const clientLogos = [
@@ -18,6 +20,7 @@ const clientLogos = [
   { src: logo5, alt: 'Perfect Power' },
   { src: logo6, alt: 'Eco Sure' },
   { src: logo7, alt: 'Eco Sure Logo' },
+  { src: platinumEdgeLogo, alt: 'Platinum Edge Waterproofing Solutions' },
 ];
 
 export const Trust: React.FC = () => {
@@ -67,6 +70,8 @@ export const Trust: React.FC = () => {
     <>
       {/* Client Showcase Section */}
       <section className="py-20 bg-[#093370] relative overflow-hidden">
+        {/* Floating dots background */}
+        <FloatingDots count={15} variant="blue" />
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <motion.div

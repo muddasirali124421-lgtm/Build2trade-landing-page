@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { FloatingDots } from '../components/FloatingDots';
 
 // Import feature images from assets
 import quotesImg from '../assets/1-1.png';
@@ -183,8 +184,10 @@ const features = [
 
 const FeatureGrid = () => {
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-brand-dark via-brand-blue to-brand-dark">
-      <div className="container mx-auto px-4">
+    <section className="py-20 lg:py-28 bg-gradient-to-b from-brand-dark via-brand-blue to-brand-dark relative overflow-hidden">
+      {/* Floating dots background */}
+      <FloatingDots count={20} variant="blue" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

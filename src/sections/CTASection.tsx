@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FloatingDots } from '../components/FloatingDots';
 
 export const CTASection: React.FC = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-brand-dark"></div>
+      {/* Floating dots background */}
+      <FloatingDots count={15} variant="blue" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
