@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FileText, CheckCircle } from 'lucide-react'
+import { FileText } from 'lucide-react'
 
 const TermsAndConditions = () => {
   return (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { BookOpen, CheckCircle } from 'lucide-react'
+import { BookOpen } from 'lucide-react'
 
 const TermsOfUse = () => {
   return (
