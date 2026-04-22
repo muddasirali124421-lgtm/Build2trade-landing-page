@@ -57,14 +57,13 @@ export const Services: React.FC = () => {
       ))}
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
-          <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-4 block">WHO ARE WE NETWORKING WITH</span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-            Designed for the Entire <span className="text-brand-blue">Construction Ecosystem</span>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight">
+            Who are we <span className="text-brand-blue">networking with</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
