@@ -10,15 +10,15 @@ const services = [
     icon: <Ruler size={40} className="text-brand-blue" />
   },
   {
-    role: "Tradesman",
+    role: "Tradies",
     title: "Access Consistent Work",
     description: "Access consistent job opportunities and grow your network. Get matched with quality builders and steady work that fits your skills.",
     icon: <Hammer size={40} className="text-brand-blue" />
   },
   {
-    role: "Supplier",
-    title: "Simplify Operations",
-    description: "Simplify operations and manage work more efficiently. Keep all your projects, quotes, and communications in one place.",
+    role: "Suppliers",
+    title: "Streamline Your Workflow",
+    description: "Streamline your workflow and connect with builders and tradies actively looking for reliable suppliers.",
     icon: <Briefcase size={40} className="text-brand-blue" />
   }
 ];
@@ -58,8 +58,8 @@ export const Services: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-2 block">Who are we networking with</span>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+          <span className="text-brand-yellow font-bold tracking-wider uppercase text-sm mb-4 block">WHO ARE WE NETWORKING WITH</span>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
             Designed for the Entire <span className="text-brand-blue">Construction Ecosystem</span>
           </h2>
         </div>
@@ -72,12 +72,15 @@ export const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
-              className="bg-white border text-center border-gray-100 p-10 rounded-3xl shadow-sm hover:shadow-xl hover:border-brand-blue/20 transition-all duration-300 group"
+              className="bg-white border text-center border-gray-100 p-10 rounded-3xl shadow-sm hover:shadow-xl hover:border-brand-blue/20 hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="w-20 h-20 mx-auto bg-brand-light rounded-2xl flex items-center justify-center mb-8 transform group-hover:-translate-y-2 group-hover:bg-brand-blue/10 transition-all duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-brand-blue font-bold tracking-widest uppercase text-xs mb-3">{service.role}</h3>
+              <div className="mb-4">
+                <h3 className="text-brand-blue font-bold tracking-widest uppercase text-xs mb-2">{service.role}</h3>
+                <div className="w-16 h-1 bg-brand-yellow mx-auto rounded-full"></div>
+              </div>
               <h4 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h4>
               <p className="text-gray-600 leading-relaxed">
                 {service.description}

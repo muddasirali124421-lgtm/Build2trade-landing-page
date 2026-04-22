@@ -50,7 +50,7 @@ const CoreFeatures = () => {
                 transition={{ delay: 0.2 }}
                 className="text-3xl md:text-5xl font-bold text-white mb-6"
               >
-                Ready to Transform Your Construction Business?
+                Start Building Better Connections Today
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ const CoreFeatures = () => {
                 transition={{ delay: 0.3 }}
                 className="text-xl text-white/80 mb-10"
               >
-                Join thousands of builders and tradies already using Build2Trade to streamline their workflow.
+                Join builders and tradies already connecting, posting jobs, and managing projects in one place.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const CoreFeatures = () => {
                   href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-gold-light text-brand-dark font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
+                  className="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-gold-light text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-brand-gold/25"
                 >
                   Get Started Free
                   <ArrowRight className="w-5 h-5" />

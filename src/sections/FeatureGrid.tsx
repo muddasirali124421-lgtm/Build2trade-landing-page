@@ -214,9 +214,9 @@ const FeatureGrid = () => {
             transition={{ delay: 0.2 }}
             className="text-3xl md:text-5xl font-bold text-white mb-6"
           >
-            Powerful Features for{' '}
+            The Network That{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-amber-300">
-              Modern Construction
+              Builds Your Business
             </span>
           </motion.h2>
 
@@ -227,7 +227,7 @@ const FeatureGrid = () => {
             transition={{ delay: 0.3 }}
             className="text-lg text-gray-400"
           >
-            Everything you need to manage projects, connect with professionals, and grow your construction business.
+            Build real connections, find new opportunities, and keep your projects moving without the admin overload.
           </motion.p>
         </motion.div>
 
