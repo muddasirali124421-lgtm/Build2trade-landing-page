@@ -10,9 +10,9 @@ const InviteForm = () => {
   const [isError, setIsError] = useState(false)
 
   // EmailJS Configuration
-  const EMAILJS_PUBLIC_KEY = '-ikb4LLvBWDRQb_1-'
-  const EMAILJS_SERVICE_ID = 'service_li1nkgh'
-  const EMAILJS_TEMPLATE_ID = 'template_0e1v325'
+  const EMAILJS_PUBLIC_KEY = 'q4Z7dLk7zL-zZiIOV'
+  const EMAILJS_SERVICE_ID = 'service_acirgnr'
+  const EMAILJS_TEMPLATE_ID = 'template_zrogeyl'
 
   // Check if emailjs is available
   useEffect(() => {
