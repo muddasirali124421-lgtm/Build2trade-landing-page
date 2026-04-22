@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
     <header className={`sticky top-0 z-50 transition-all duration-300 bg-white shadow-sm ${scrolled ? 'py-3' : 'py-4'}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex-shrink-0 relative z-50">
-          <Logo className="scale-75 origin-left" />
+          <Logo />
         </Link>
 
         {/* Desktop Nav - Shows Get Started button */}
@@ -42,11 +42,11 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden relative z-50 text-gray-800 p-2"
+          className="md:hidden relative z-50 flex items-center justify-center w-10 h-10 text-gray-800 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
         {/* Mobile Menu */}

@@ -71,7 +71,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen font-sans bg-white text-gray-900 selection:bg-brand-blue selection:text-white pb-0">
+      <div className="min-h-screen font-sans bg-white text-gray-900 selection:bg-brand-blue selection:text-white pb-0 overflow-x-hidden w-full">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
