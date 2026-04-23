@@ -1,25 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserPlus, Search, MessageSquare, FileCheck, FolderOpen } from 'lucide-react';
+import { UserPlus, FolderOpen, MessageSquare, FileCheck, Search } from 'lucide-react';
 
 const builderSteps = [
   {
     step: 1,
     icon: <UserPlus size={32} className="text-brand-blue" />,
     title: "Create Your Account",
-    description: "Activate your free trial in seconds. No payment required to get started."
+    description: "Create your account in minutes and start building your network with trusted tradies."
   },
   {
     step: 2,
-    icon: <Search size={32} className="text-brand-yellow" />,
-    title: "Post or Find Work",
-    description: "List jobs or explore available opportunities that match your needs."
+    icon: <FolderOpen size={32} className="text-brand-yellow" />,
+    title: "Post Your Project",
+    description: "Create your project, choose the required trades, and manage everything easily on Build2Trade."
   },
   {
     step: 3,
     icon: <MessageSquare size={32} className="text-brand-blue" />,
     title: "Connect and Manage",
-    description: "Message, organise, and complete jobs efficiently—all in one place."
+    description: "Communicate, organise, and manage your projects efficiently—all in one place."
   }
 ];
 
@@ -27,20 +27,20 @@ const tradieSteps = [
   {
     step: 1,
     icon: <UserPlus size={32} className="text-brand-blue" />,
-    title: "Create Account",
-    description: "Sign up in seconds and start your journey to finding great projects."
+    title: "Create Your Account",
+    description: "Sign up in seconds and start your journey to finding quality projects."
   },
   {
     step: 2,
     icon: <FileCheck size={32} className="text-brand-yellow" />,
-    title: "Complete Profile",
-    description: "Showcase your skills, experience, and certifications to stand out."
+    title: "Complete Your Profile",
+    description: "Choose your trade, add your experience, and complete your profile to connect with more builders."
   },
   {
     step: 3,
-    icon: <FolderOpen size={32} className="text-brand-blue" />,
+    icon: <Search size={32} className="text-brand-blue" />,
     title: "Explore Project Leads",
-    description: "Browse and connect with builders who need your expertise."
+    description: "Find project leads, connect with builders, and grow your network."
   }
 ];
 

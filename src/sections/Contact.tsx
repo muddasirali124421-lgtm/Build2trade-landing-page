@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, Send } from 'lucide-react'
+import { Phone, Mail, Send, Loader2 } from 'lucide-react'
+import emailjs from '@emailjs/browser'
+import { useToast } from '../components/Toast'
+
+// EmailJS Configuration
+const EMAILJS_CONFIG = {
+  SERVICE_ID: 'service_j9qdr37',
+  TEMPLATE_ID: 'template_vzlsdyr',
+  PUBLIC_KEY: 'q4Z7dLk7zL-zZiIOV',
+  TO_EMAIL: 'admin@build2trade.com.au'
+} as const
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null)
+  const [isSending, setIsSending] = useState(false)
+  const [isEmailJSReady, setIsEmailJSReady] = useState(false)
+  const { showToast } = useToast()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,10 +24,96 @@ const Contact = () => {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Initialize EmailJS
+  useEffect(() => {
+    try {
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
+      setIsEmailJSReady(true)
+      console.log('✅ EmailJS initialized successfully')
+    } catch (error) {
+      console.error('❌ EmailJS initialization failed:', error)
+      showToast('Email service not available. Please try again later.', 'error')
+    }
+  }, [])
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    alert('Thank you! We will get back to you soon.')
+    
+    // Validate EmailJS is ready
+    if (!isEmailJSReady) {
+      showToast('Email service not ready. Please refresh the page.', 'error')
+      return
+    }
+    
+    // Validate form data
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      showToast('Please fill in all required fields.', 'error')
+      return
+    }
+    
+    setIsSending(true)
+    
+    try {
+      const templateParams = {
+        from_name: formData.name.trim(),
+        from_email: formData.email.trim(),
+        phone: formData.phone?.trim() || 'Not provided',
+        message: formData.message.trim(),
+        to_email: EMAILJS_CONFIG.TO_EMAIL,
+        reply_to: formData.email.trim()
+      }
+      
+      console.log('📧 Sending email with params:', templateParams)
+      console.log('🔧 EmailJS Config:', EMAILJS_CONFIG)
+      
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      )
+      
+      console.log('✅ EmailJS Success:', result)
+      console.log('📨 Status:', result.status)
+      console.log('🔖 Text:', result.text)
+      
+      if (result.status === 200) {
+        showToast('✅ Message sent successfully! We will get back to you soon.', 'success')
+        setFormData({ name: '', email: '', phone: '', message: '' })
+      } else {
+        throw new Error(`Unexpected status: ${result.status}`)
+      }
+    } catch (error: any) {
+      console.error('❌ EmailJS Error:', error)
+      
+      // Detailed error logging
+      const errorInfo = {
+        message: error?.message || 'Unknown error',
+        text: error?.text || 'No error text',
+        status: error?.status || 'No status',
+        name: error?.name || 'No name'
+      }
+      
+      console.error('❌ Error Details:', errorInfo)
+      
+      // User-friendly error message
+      let userMessage = 'Failed to send message. '
+      
+      if (error?.text?.includes('template')) {
+        userMessage += 'Template not found. Please verify EmailJS configuration.'
+      } else if (error?.text?.includes('service')) {
+        userMessage += 'Email service not found. Please verify EmailJS configuration.'
+      } else if (error?.text?.includes('network') || error?.message?.includes('network')) {
+        userMessage += 'Network error. Please check your internet connection.'
+      } else if (error?.message?.includes('Unauthorized') || error?.status === 401) {
+        userMessage += 'Invalid API key. Please verify EmailJS configuration.'
+      } else {
+        userMessage += error?.text || error?.message || 'Please try again or contact us directly.'
+      }
+      
+      showToast(userMessage, 'error')
+    } finally {
+      setIsSending(false)
+    }
   }
 
   return (
@@ -42,13 +142,14 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-brand-dark mb-2">
                   Your Name
                 </label>
                 <input
                   type="text"
+                  name="name"
                   required
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                   placeholder="Enter your name"
@@ -63,6 +164,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   required
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                   placeholder="Enter your email"
@@ -77,6 +179,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                   placeholder="Enter your phone (optional)"
                   value={formData.phone}
@@ -89,6 +192,7 @@ const Contact = () => {
                   Your Message
                 </label>
                 <textarea
+                  name="message"
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all resize-none"
@@ -98,9 +202,27 @@ const Contact = () => {
                 />
               </div>
 
-              <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
-                <Send className="w-5 h-5" />
-                Send Message
+              <button
+                type="submit"
+                disabled={isSending || !isEmailJSReady}
+                className="w-full flex items-center justify-center gap-2 bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-[0_0_20px_rgba(241,179,47,0.3)]"
+              >
+                {isSending ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : !isEmailJSReady ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Initializing...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </motion.div>

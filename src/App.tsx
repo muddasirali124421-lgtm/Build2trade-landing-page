@@ -6,6 +6,7 @@ import InviteForm from './sections/InviteForm';
 import ScrollToTop from './components/ScrollToTop';
 import { FloatingPromoButton } from './components/FloatingPromoButton';
 import { PromoModal } from './components/PromoModal';
+import { ToastProvider } from './components/Toast';
 
 // Page sections
 import { Hero } from './sections/Hero';
@@ -69,25 +70,27 @@ const HomePage = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen font-sans bg-white text-gray-900 selection:bg-brand-blue selection:text-white pb-0 overflow-x-hidden w-full">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/giveaway" element={<Giveaway />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/terms-of-use" element={<TermsOfUse />} />
-          <Route path="/features" element={<CoreFeatures />} />
-        </Routes>
-        <Footer />
-        <FloatingPromoButton />
-      </div>
-    </Router>
+    <ToastProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen font-sans bg-white text-gray-900 selection:bg-brand-blue selection:text-white pb-0 overflow-x-hidden w-full">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/giveaway" element={<Giveaway />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
+            <Route path="/features" element={<CoreFeatures />} />
+          </Routes>
+          <Footer />
+          <FloatingPromoButton />
+        </div>
+      </Router>
+    </ToastProvider>
   );
 }
 
