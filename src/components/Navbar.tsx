@@ -40,14 +40,37 @@ export const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        {/* Mobile Toggle */}
-        <button 
-          className="md:hidden relative z-50 flex items-center justify-center w-10 h-10 text-gray-800 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile Actions: Sign In, Sign Up, Menu */}
+        <div className="md:hidden flex items-center gap-2">
+          {/* Sign In - Hidden on very small screens, shown when space allows */}
+          <a
+            href="https://build2trade-customer-frontend-production.up.railway.app/sign-in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden xs:flex items-center justify-center h-9 px-3 text-sm font-medium text-brand-blue border border-brand-blue/30 rounded-lg hover:bg-brand-blue/5 transition-all"
+          >
+            Sign In
+          </a>
+
+          {/* Sign Up - Yellow CTA button, always visible on mobile */}
+          <a
+            href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center h-9 px-3 text-sm font-semibold bg-brand-yellow text-brand-dark rounded-lg hover:bg-brand-yellow/90 transition-all shadow-sm"
+          >
+            Sign Up
+          </a>
+
+          {/* Hamburger Menu */}
+          <button
+            className="relative z-50 flex items-center justify-center w-10 h-10 text-gray-800 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         <AnimatePresence>
@@ -68,7 +91,8 @@ export const Navbar: React.FC = () => {
               <div className="border-t border-gray-200 my-2" />
 
               {/* Sign In / Sign Up Buttons - At bottom of mobile menu */}
-              <div className="flex flex-col gap-3">
+              {/* Sign In moved here for very small screens (xs:hidden) */}
+              <div className="flex xs:hidden flex-col gap-3">
                 <p className="text-sm text-gray-500 text-center">Already have an account?</p>
                 <div className="flex gap-3">
                   <a
@@ -88,6 +112,19 @@ export const Navbar: React.FC = () => {
                     Sign Up
                   </a>
                 </div>
+              </div>
+
+              {/* Get Started CTA - For larger mobile screens */}
+              <div className="hidden xs:flex flex-col gap-3 border-t border-gray-200 pt-4">
+                <p className="text-sm text-gray-500 text-center">Ready to get started?</p>
+                <a
+                  href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-center text-sm font-medium bg-brand-blue hover:bg-brand-dark text-white px-4 py-3 rounded-xl transition-all"
+                >
+                  Get Started
+                </a>
               </div>
             </motion.div>
           )}
