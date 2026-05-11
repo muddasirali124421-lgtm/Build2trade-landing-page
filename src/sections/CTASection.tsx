@@ -28,9 +28,14 @@ export const CTASection: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-10 py-5 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <a
+                href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto text-center bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-10 py-5 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
                 Get Started Now
-              </button>
+              </a>
             </div>
             <p className="mt-6 text-sm text-gray-400 flex items-center justify-center gap-2">
               <span className="inline-block w-2 h-2 bg-green-400 rounded-full"></span>

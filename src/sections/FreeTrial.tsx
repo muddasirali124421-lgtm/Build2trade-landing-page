@@ -228,7 +228,10 @@ export const FreeTrial: React.FC = () => {
             transition={{ delay: 1.2, type: "spring", stiffness: 100 }}
             className="text-center"
           >
-            <motion.button 
+            <motion.a 
+              href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ 
                 scale: 1.08,
                 boxShadow: "0 0 50px rgba(241,179,47,0.6)"
@@ -242,7 +245,7 @@ export const FreeTrial: React.FC = () => {
                 ]
               }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-10 py-5 rounded-xl transition-colors"
+              className="inline-block bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-10 py-5 rounded-xl transition-colors"
             >
               <motion.span
                 className="flex items-center gap-2"
@@ -257,7 +260,7 @@ export const FreeTrial: React.FC = () => {
                   →
                 </motion.span>
               </motion.span>
-            </motion.button>
+            </motion.a>
             <motion.p 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
