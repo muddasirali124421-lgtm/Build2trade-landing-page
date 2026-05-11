@@ -181,9 +181,14 @@ export function PromoModal({ isOpen, onClose }: PromoModalProps) {
 
             {/* CTA Section */}
           <div className="pt-3 border-t border-white/10">
-            <button className="w-full py-2.5 bg-gradient-to-r from-yellow-400 to-amber-400 hover:from-yellow-300 hover:to-amber-300 text-gray-900 font-bold text-sm rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-yellow-400/25 transform hover:-translate-y-0.5">
+            <a
+              href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center w-full py-2.5 bg-gradient-to-r from-yellow-400 to-amber-400 hover:from-yellow-300 hover:to-amber-300 text-gray-900 font-bold text-sm rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-yellow-400/25 transform hover:-translate-y-0.5"
+            >
               Claim Your Free Access
-            </button>
+            </a>
 
             {/* Store Buttons */}
             <div className="grid grid-cols-3 gap-2 mt-2">
