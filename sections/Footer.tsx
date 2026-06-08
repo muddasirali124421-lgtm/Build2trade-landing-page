@@ -1,0 +1,91 @@
+import Link from 'next/link';
+import { Logo } from '@/components/Logo';
+
+
+export const Footer: React.FC = () => {
+  return (
+    <footer className="bg-white pt-16 pb-8 border-t border-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          {/* Brand Col */}
+          <div className="md:col-span-1">
+            <Logo className="mb-6 opacity-90 scale-90 origin-left" />
+            <p className="text-gray-500 text-sm leading-relaxed mb-6">
+              Our Mission: To make construction teamwork easy, clear, and fair for everyone.
+            </p>
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/profile.php?id=61583031629872" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 rounded-full transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="https://www.youtube.com/@Build2Trade" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 rounded-full transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              </a>
+              <a href="#" className="p-2 bg-gray-50 text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 rounded-full transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" className="p-2 bg-gray-50 text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 rounded-full transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Company Pages */}
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Company</h4>
+            <ul className="space-y-3">
+              <li><Link href="/" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Home</Link></li>
+              <li><Link href="/about" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> About Us</Link></li>
+              <li><Link href="/giveaway" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Giveaway</Link></li>
+              <li><Link href="/blogs" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Blogs</Link></li>
+              <li><Link href="/contact" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Contact Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal Pages */}
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
+            <ul className="space-y-3">
+              <li><Link href="/terms-of-use" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms Of Use</Link></li>
+              <li><Link href="/terms-and-conditions" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Terms &amp; Conditions</Link></li>
+              <li><Link href="/privacy-policy" className="text-gray-500 hover:text-brand-blue transition-colors text-sm flex items-center gap-2"><span className="text-brand-blue">›</span> Privacy Policy</Link></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Help &amp; Support</h4>
+            <p className="text-gray-500 text-sm leading-relaxed mb-3">
+              If you get stuck or have a question, our friendly team is ready to help. Open &quot;Help &amp; Support&quot; in the app, write a short message, and tap Submit!
+            </p>
+            <Link href="/contact" className="text-brand-blue font-semibold text-sm hover:underline">Send Us a Message</Link>
+          </div>
+        </div>
+
+        {/* Privacy & Terms Text */}
+        <div className="pt-8 mb-0  flex flex-col md:flex-row gap-8">
+        </div>
+
+        {/* Contact Info Bar */}
+        <div className="py-4 border-t border-gray-100">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm text-gray-500">
+            <a href="mailto:admin@build2trade.com.au" className="hover:text-brand-blue transition-colors">
+              admin@build2trade.com.au
+            </a>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <a href="tel:+61485000915" className="hover:text-brand-blue transition-colors">
+              +61 485 000 915
+            </a>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <span>ABN: 82 688 987 948</span>
+          </div>
+        </div>
+
+        <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()}© All Rights Reserved 2026 Designed And Developed by Graphica Pro Artistry
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
