@@ -8,8 +8,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
         alt="Build2Trade Logo"
         width={200}
         height={80}
-        className="h-10 sm:h-14 md:h-20 w-auto max-w-[50vw] sm:max-w-[60vw] md:max-w-none object-contain object-left"
-        style={{ height: 'auto' }}
+        className="h-10 sm:h-14 md:h-20 w-auto object-contain"
         priority
       />
     </div>
