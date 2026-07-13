@@ -57,7 +57,9 @@ const Contact = () => {
 
     try {
       const templateParams = {
+        name: formData.name.trim(),
         from_name: formData.name.trim(),
+        email: formData.email.trim(),
         from_email: formData.email.trim(),
         phone: formData.phone?.trim() || 'Not provided',
         message: formData.message.trim(),
