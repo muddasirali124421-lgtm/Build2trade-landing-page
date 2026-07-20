@@ -44,12 +44,12 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Actions: Sign In, Sign Up, Menu */}
         <div className="md:hidden flex items-center gap-2">
-          {/* Sign In - Hidden on very small screens, shown when space allows */}
+          {/* Sign In - Always visible on mobile */}
           <a
             href="https://build2trade-customer-frontend-production.up.railway.app/sign-in"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden xs:flex items-center justify-center h-9 px-3 text-sm font-medium text-brand-blue border border-brand-blue/30 rounded-lg hover:bg-brand-blue/5 transition-all"
+            className="flex items-center justify-center h-9 px-3 text-sm font-semibold bg-brand-yellow text-brand-dark rounded-lg hover:bg-brand-yellow/90 transition-all shadow-sm"
           >
             Sign In
           </a>

@@ -134,15 +134,23 @@ export const Hero: React.FC = () => {
                 </a>
               </div>
 
-              {/* Mobile Main CTA - Get Started Button */}
-              <div className="flex md:hidden flex-col gap-4 mb-12">
+              {/* Mobile Main CTA - Get Started + Sign In Buttons */}
+              <div className="flex md:hidden flex-row gap-3 mb-12">
                 <a
                   href="https://build2trade-customer-frontend-production.up.railway.app/role-selection"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1 text-center"
+                  className="flex-1 bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-6 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1 text-center"
                 >
                   Get Started
+                </a>
+                <a
+                  href="https://build2trade-customer-frontend-production.up.railway.app/sign-in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold text-lg px-6 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(241,179,47,0.3)] hover:shadow-[0_0_30px_rgba(241,179,47,0.5)] transform hover:-translate-y-1 text-center"
+                >
+                  Sign In
                 </a>
               </div>
 
