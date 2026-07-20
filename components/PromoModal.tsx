@@ -86,16 +86,16 @@ export function PromoModal({ isOpen, onClose }: PromoModalProps) {
 
           {/* Subheading */}
           <p className="text-white/70 text-center mb-2 max-w-md mx-auto leading-relaxed text-xs">
-            Enjoy complete access to all premium features for three months at absolutely no cost.
+          Enjoy full access to all premium features for 3 months at absolutely no cost. Your 3 months free will be applied automatically when you subscribe.
           </p>
 
           {/* Countdown Badge */}
-          <div className="flex justify-center mb-3">
+          {/* <div className="flex justify-center mb-3">
             <div className="flex items-center gap-1.5 px-3 py-1.5 bg-red-500/10 border border-red-400/30 rounded-lg">
               <Clock className="w-3.5 h-3.5 text-red-400" />
               <span className="text-red-300 font-bold text-xs">Offer Valid Until June 10</span>
             </div>
-          </div>
+          </div> */}
 
           {/* How It Works Section */}
           <div className="mb-3">
@@ -125,11 +125,15 @@ export function PromoModal({ isOpen, onClose }: PromoModalProps) {
                 </li>
                 <li className="flex items-start gap-1.5">
                   <span className="flex-shrink-0 w-3.5 h-3.5 flex items-center justify-center bg-green-500/20 text-green-400 text-[10px] font-bold rounded-full">2</span>
-                  <span>Enter promo code at checkout:</span>
+                  <span>Your 3 months free will be applied automatically. </span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <span className="flex-shrink-0 w-3.5 h-3.5 flex items-center justify-center bg-green-500/20 text-green-400 text-[10px] font-bold rounded-full">2</span>
+                  <span>Complete your subscription.</span>
                 </li>
               </ol>
               {/* Promo Code Box */}
-              <div className="mt-2 p-2 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 border-2 border-dashed border-yellow-400/50 rounded-lg text-center cursor-pointer group hover:border-yellow-400 transition-colors"
+              {/* <div className="mt-2 p-2 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 border-2 border-dashed border-yellow-400/50 rounded-lg text-center cursor-pointer group hover:border-yellow-400 transition-colors"
                    onClick={copyPromoCode}>
                 <p className="text-[10px] text-yellow-300/80 mb-0.5 uppercase tracking-wider">Tap to Copy</p>
                 <p className="text-lg font-black text-yellow-400 tracking-wider">3MONTHSFREE</p>
@@ -138,6 +142,12 @@ export function PromoModal({ isOpen, onClose }: PromoModalProps) {
                     <CheckCircle className="w-3 h-3" /> Copied!
                   </p>
                 )}
+              </div> */}
+              <div className="mt-2 p-2 bg-green-500/10 border border-green-400/30 rounded-lg">
+                <p className="text-green-400 text-[10px] font-medium flex items-center gap-1.5">
+                  <CheckCircle className="w-3 h-3" />
+                  No promo code required
+                </p>
               </div>
             </div>
 
@@ -159,17 +169,17 @@ export function PromoModal({ isOpen, onClose }: PromoModalProps) {
                 </li>
                 <li className="flex items-start gap-1.5">
                   <span className="flex-shrink-0 w-3.5 h-3.5 flex items-center justify-center bg-gray-500/20 text-white text-[10px] font-bold rounded-full">2</span>
-                  <span>See the 3-month free trial on payment screen</span>
+                  <span>Your 3 months free will be applied automatically.</span>
                 </li>
                 <li className="flex items-start gap-1.5">
                   <span className="flex-shrink-0 w-3.5 h-3.5 flex items-center justify-center bg-gray-500/20 text-white text-[10px] font-bold rounded-full">3</span>
-                  <span>Click subscribe to activate</span>
+                  <span>Complete your subscription.</span>
                 </li>
               </ol>
               <div className="mt-2 p-2 bg-green-500/10 border border-green-400/30 rounded-lg">
                 <p className="text-green-400 text-[10px] font-medium flex items-center gap-1.5">
                   <CheckCircle className="w-3 h-3" />
-                  No promo code required for iOS
+                  No promo code required
                 </p>
               </div>
             </div>
@@ -177,7 +187,7 @@ export function PromoModal({ isOpen, onClose }: PromoModalProps) {
 
             {/* Website Note */}
             <p className="text-white/50 text-center text-[10px] mt-2 italic">
-              Subscriptions can also be completed through the website using the launch code.
+              Offer available on the app and website. Your 3 months free will be applied automatically during signup.
             </p>
           </div>
 

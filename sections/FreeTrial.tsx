@@ -7,15 +7,15 @@ import { Check, Calendar, CreditCard, XCircle, Sparkles } from 'lucide-react';
 const reassurances = [
   {
     icon: <CreditCard size={20} className="text-brand-yellow" />,
-    text: "No payment required to start"
+    text: "No payment required to get started"
   },
   {
     icon: <Calendar size={20} className="text-brand-yellow" />,
-    text: "No charges during the 3 months"
+    text: "No charges for your first 3 months"
   },
   {
     icon: <XCircle size={20} className="text-brand-yellow" />,
-    text: "Cancel anytime before billing"
+    text: "Cancel anytime before billing begins"
   }
 ];
 
@@ -89,7 +89,7 @@ export const FreeTrial: React.FC = () => {
               >
                 <Sparkles className="w-4 h-4 text-brand-yellow" />
               </motion.div>
-              <span className="text-brand-yellow font-semibold text-sm">3-Month Free Trial</span>
+              <span className="text-brand-yellow font-semibold text-sm">3-Month Free</span>
               <motion.span
                 className="w-2 h-2 bg-brand-yellow rounded-full"
                 animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
@@ -145,10 +145,10 @@ export const FreeTrial: React.FC = () => {
             </motion.div>
 
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
-              We understand that committing to a new platform can feel uncertain. That&apos;s why we offer a full 3-month free trial so you can explore everything without pressure.
+            We understand that committing to a new platform can feel uncertain. That's why we're giving you 3 months of full access at no cost, so you can explore everything Build2Trade has to offer.
             </p>
             <p className="text-lg text-brand-yellow mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
-              Explore our platform with no cost.
+            Start today with zero upfront cost.
             </p>
 
             {/* Urgency Messaging - Animated */}
@@ -165,14 +165,14 @@ export const FreeTrial: React.FC = () => {
                 animate={{ opacity: [1, 0.8, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <span className="text-brand-yellow font-bold">Free for 3 months</span> if you sign up before <motion.span
+                <span className="text-brand-yellow font-bold">Get 3 Months Free</span> when you subscribe <motion.span
                   className="text-brand-yellow font-bold text-lg md:text-xl"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
-                >June 10</motion.span>
+                >today</motion.span>
               </motion.p>
               <p className="text-gray-300 text-center text-xs md:text-sm mt-2">
-                After trial: $49.99/month • Cancel anytime
+                After your free period: $49.99/month • Cancel anytime
               </p>
             </motion.div>
           </motion.div>
@@ -254,7 +254,7 @@ export const FreeTrial: React.FC = () => {
                 whileHover={{ x: [0, 5, 0] }}
                 transition={{ duration: 0.5 }}
               >
-                Start Free 3-Month Trial
+                Get Started Free
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1, repeat: Infinity }}
